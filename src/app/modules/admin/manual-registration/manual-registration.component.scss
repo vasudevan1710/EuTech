@@ -1,0 +1,84 @@
+.example-spacer{
+    flex: 1 1 auto;
+  }
+  body{
+    font-family: "Poppins", sans-serif;
+    background-color: #e2d9d9;
+    font-size: 0.9375rem;
+   margin: 10px;
+  }
+*
+{
+    margin: 6px;
+}
+.patient-content {
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+}
+.or-line-divider {
+  border-top: 1px solid rgba(141, 134, 134, 0.5);
+  position: relative;
+  margin-top: 40px;
+}
+.content
+{
+  margin-left: 80px;
+}
+mat-form-field
+{
+  padding-top: 0px;
+  padding-bottom: 11px;
+  height: 90px;
+  width: 15%;
+}
+.mat-stepper-vertical{
+  margin: 0px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+    background-color: #e2d9d9;
+    font-size: 0.9375rem;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+button
+{
+  background: rgb(0, 106, 255);
+  }
+  .patient-1{
+    width: 140%;
+    padding-top: 11px;
+    padding-bottom: 0px;
+  }
+  .patient-1 mat-form-field
+  {
+    padding-left: 20px;
+  }
+.mat-mdc-table {
+  width: 100%;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.mat-column-name {
+  height: 10px;
+}
+.mat-mdc-table mat-row:nth-child(even)
+{
+  background-color: rgb(208, 234, 230);
+}
+ .th:nth-child(even)
+{
+  background-color: rgb(208, 234, 230);
+}
