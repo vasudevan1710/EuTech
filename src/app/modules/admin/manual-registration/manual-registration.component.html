@@ -11,8 +11,8 @@
     <div class="flex-1 min-w-0">
         <!-- Title -->
         <div class="mt-2">
-            <h2 class="text-3xl md:text-2xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
-               Patient Details
+            <h2 class="text-3xl md:text-2xl font-bold tracking-tight leading-7 sm:leading-10 truncate">
+               PATIENT DETAILS
             </h2>
         </div>
     </div>
@@ -29,83 +29,90 @@
         </button>
     </div>
 </div>
-    <div class="card-body">
-        <div class="card cardTop">
-          
-  
-    <div class="content">
-    <mat-form-field>
-            <mat-label>Name</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-    <mat-form-field >
-        <mat-label>HRN</mat-label>
-        <input matInput type="any">
-    </mat-form-field>
-        <mat-form-field >
-            <mat-label>Id Trvl Doc</mat-label>
-            <input matInput type="id">
-        </mat-form-field>
-        <mat-form-field >
+    <div class="flex-auto -mt-8 p-2 sm:p-2 rounded-t-2x1  bg-card bg-default">
+      <mat-card style="border-radius: 12px;"> 
+        <mat-card-content>
+          <div class="card-body">
+          <div class="row">
+    <div class="col-sm-3">
+    <mat-form-field  style="width: 20%;">
             <mat-label>IC#</mat-label>
-            <input matInput type="id">
+            <input matInput type="text" class="form-control" maxlength="10" autocomplete="off">
         </mat-form-field>
-        <mat-form-field >
+        <mat-form-field style="width: 12%;">
+          <mat-label>Title</mat-label>
+          <mat-select>
+            <mat-option value="one">MR</mat-option>
+            <mat-option value="two">MRS</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <mat-form-field style="width: 25%;">
+        <mat-label>Name</mat-label>
+        <input matInput type="any" maxlength="100">
+    </mat-form-field>
+    <mat-form-field  style="width: 30%;">
+      <mat-label>HRN</mat-label>
+      <input matInput type="text" class="form-control" maxlength="10" autocomplete="off">
+  </mat-form-field>
+  </div>  
+          </div> 
+       
+  <div class="row">
+        <div class="col-sm-3">
+          <mat-form-field style="width: 20%;">
+            <mat-label>Nursing</mat-label>
+            <mat-select>
+              <mat-option value="one">1</mat-option>
+              <mat-option value="two">2</mat-option>
+          </mat-select>
+        </mat-form-field>
+      <mat-form-field style="width: 70%;">
+        <mat-label>N</mat-label>
+        <input matInput type="any" maxlength="100">
+    </mat-form-field>
+        </div>
+      </div>
+    
+  <div class="row">
+        <div class="col-sm-3">
+          <mat-form-field style="width: 20%;">
             <mat-label>Date Of Birth</mat-label>
             <input matInput [matDatepicker]="picker">
-  <mat-datepicker-toggle style="translate: 100%;" matIconSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
+            <mat-datepicker-toggle style="translate: 100%;" matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-        <mat-form-field style="width: 11.5%;" >
+        <mat-form-field style="width: 20%;" >
             <mat-label>Age</mat-label>
             <input matInput type="number">
         </mat-form-field>
-        <mat-form-field >
+        <mat-form-field style="width: 20%;">
             <mat-label>Sex</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        <mat-form-field >
-            <mat-label>Religion</mat-label>
             <mat-select>
-                <mat-option value="one">Hindu</mat-option>
-                <mat-option value="two">Muslim</mat-option>
-                <mat-option value="three">Christian</mat-option>
-            </mat-select>
+              <mat-option value="one">Male</mat-option>
+              <mat-option value="two">Female</mat-option>
+              <mat-option value="three">Others</mat-option>
+          </mat-select>
         </mat-form-field>
-        <mat-form-field >
-            <mat-label>Nationality</mat-label>
-            <mat-select>
-                <mat-option value="one">Indian</mat-option>
-                <mat-option value="two">Others</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field >
-            <mat-label>Marital Status</mat-label>
-            <mat-select>
-                <mat-option value="one">Married</mat-option>
-                <mat-option value="two">Unmarried</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field >
-            <mat-label>Blood Group</mat-label>
-            <mat-select>
-                <mat-option value="one">O-Positive</mat-option>
-                <mat-option value="two">O-Negative</mat-option>
-                <mat-option value="three">AB-Negative</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field >
-            <mat-label>Race</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-    </div>
-            </div>
+        
+        <mat-form-field style="width: 28%;" >
+          <mat-label>Ward/Bed</mat-label>
+          <input matInput type="text">
+      </mat-form-field>
+     
         </div>
+    </div>
+  
+  </div>
+    </mat-card-content>
+  </mat-card>  
+  </div>    
+      
 
-    <div class="or-line-divider"></div>
-    <br>
+   
+    &nbsp; 
 <!-- /stepper -->
-
+<div class="flex-auto -mt-8 p-2 sm:p-2 rounded-t-2x1  bg-card bg-default">
+    <mat-card style="border-radius: 12px;">
       <mat-stepper orientation="vertical" #stepper>
         <mat-step [stepControl]="firstFormGroup" errorMessage="required">
           <form [formGroup]="firstFormGroup">
@@ -114,11 +121,11 @@
             <div class="patient-1">
             <mat-form-field >
               <mat-label>E-mail</mat-label>
-              <input matInput type="email" formControlName="firstCtrl" required>
+              <input matInput type="email" formControlName="basicCtrl" required>
             </mat-form-field>
             <mat-form-field >
                 <mat-label>Mobile</mat-label>
-                <input matInput type="tel" formControlName="secondCtrl" required>
+                <input matInput type="tel" formControlName="firstCtrl" required>
               </mat-form-field>
               <mat-form-field >
                 <mat-label>Patient Type</mat-label>
@@ -164,7 +171,7 @@
             <div class="patient-1">
             <mat-form-field >
                 <mat-label>Contact Person</mat-label>
-                <input matInput type="tel" formControlName="thirdCtrl" required>
+                <input matInput type="tel" formControlName="secondCtrl" required>
               </mat-form-field>
               <mat-form-field >
                 <mat-label>Fax</mat-label>
@@ -273,7 +280,7 @@
                 </mat-table>
                 <mat-form-field appearance="outline">
                   <mat-label>Address</mat-label>
-                  <input matInput formControlName="sixthCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                  <input matInput formControlName="thirdCtrl" placeholder="Ex. 1 Main St, New York, NY"
                          required>
                 </mat-form-field>
               <div class="button">
@@ -286,7 +293,7 @@
             <form [formGroup]="fourthFormGroup">
               <mat-form-field>
                 <mat-label>Address</mat-label>
-                <input matInput formControlName="fifthCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                <input matInput formControlName="fourthCtrl" placeholder="Ex. 1 Main St, New York, NY"
                        required>
               </mat-form-field>
               <div class="button">
@@ -299,7 +306,7 @@
             <form [formGroup]="fifthFormGroup">
               <mat-form-field>
                 <mat-label>Address</mat-label>
-                <input matInput formControlName="sixthCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                <input matInput formControlName="fifthCtrl" placeholder="Ex. 1 Main St, New York, NY"
                        required>
               </mat-form-field>
               <div class="button">
@@ -317,5 +324,7 @@
           </div>
         </mat-step>
       </mat-stepper>
+    </mat-card>
+</div>
 </body>
 </html>

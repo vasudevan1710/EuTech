@@ -16,20 +16,20 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class ManualRegistrationComponent {
   
   firstFormGroup = this._formBuilder.group({
+    basicCtrl: ['', Validators.required],
     firstCtrl: ['', Validators.required],
-    secondCtrl: ['', Validators.required],
   });
   secondFormGroup = this._formBuilder.group({
-    thirdCtrl: ['', Validators.required],
+    secondCtrl: ['', Validators.required],
   });
   thirdFormGroup = this._formBuilder.group({
-    fourthCtrl: ['', Validators.required],
+    thirdCtrl: ['', Validators.required],
   });
   fourthFormGroup = this._formBuilder.group({
-    fifthCtrl: ['', Validators.required],
+    fourthCtrl: ['', Validators.required],
   });
   fifthFormGroup = this._formBuilder.group({
-    sixthCtrl: ['', Validators.required],
+    fifthCtrl: ['', Validators.required],
   });
  
   isLinear = false;
