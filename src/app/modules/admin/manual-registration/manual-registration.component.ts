@@ -25,12 +25,7 @@ export class ManualRegistrationComponent {
   thirdFormGroup = this._formBuilder.group({
     thirdCtrl: ['', Validators.required],
   });
-  fourthFormGroup = this._formBuilder.group({
-    fourthCtrl: ['', Validators.required],
-  });
-  fifthFormGroup = this._formBuilder.group({
-    fifthCtrl: ['', Validators.required],
-  });
+
  
   isLinear = false;
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
