@@ -120,7 +120,7 @@
   <mat-card style="border-radius: 12px;">
 <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" >
   <mat-tab>
-    <ng-template mat-tab-label>Personal Details</ng-template>
+    <ng-template mat-tab-label ><b>Personal Details</b></ng-template>
     <mat-list-item
     style="font-size:large;font-weight: 600;">Address 1</mat-list-item>
 <mat-divider></mat-divider>
@@ -298,7 +298,7 @@
         </div>
     </div>
 
-    <p><b>Personal Details</b></p>
+    <p>Personal Details</p>
     <div class="patient-1">
     <mat-form-field >
       <mat-label>E-mail</mat-label>
@@ -316,7 +316,7 @@
         </mat-select>
       </mat-form-field>
       </div>
-        <p class="title"><b>Proof of Resident Details</b></p>
+        <p class="title">Proof of Resident Details</p>
         <div class="patient-1">
             <mat-checkbox class="example-margin">Resident</mat-checkbox>
             <mat-form-field >
@@ -345,7 +345,8 @@
       <button mat-button>Next</button>
     </div>
   </mat-tab>
-  <mat-tab label="Additional Details">
+  <mat-tab>
+    <ng-template mat-tab-label ><b>Additional Details</b></ng-template>
       <p><b>Emergency Contact Details</b></p>
       <div class="patient-1">
       <mat-form-field >
@@ -426,8 +427,8 @@
         <button mat-button>Next</button>
       </div>
     </mat-tab>
-  <mat-tab label="Name of the Kin">
-    
+  <mat-tab>
+    <ng-template mat-tab-label ><b>Name of the Kin</b></ng-template>
         <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
           <!-- Position Column -->
           <ng-container matColumnDef="position">
