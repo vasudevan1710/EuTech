@@ -13,28 +13,28 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id   : 'appointment',
         title: 'Appointment',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
+        icon : 'add_business',
         link : '/appointment'
     },
     {
         id   : 'manual',
         title: 'Manual Registartion',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
+        icon : 'app_registration',
         link : '/manual'
     },
     {
         id   : 'billing',
         title: 'Billing and Discharge',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
+        icon : 'mat_outline:stacked_bar_chart',
         link : '/billing'
     },
     {
         id   : 'counter',
         title: 'Counter Operation',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
+        icon : 'countertops',
         link : '/counter'
     }
 ];
