@@ -1,445 +1,478 @@
 .example-cardleft {
-    max-width: 100%;
-  }
-  .example-cardright {
-    max-width: 100%;
+  max-width: 100%;
+}
+.example-cardright {
+  max-width: 100%;
 //    padding-left: 100px;
-  }
+}
 
-  .mat-stepper-vertical {
-    margin-top: 8px;
-  }
-  .mat-mdc-form-field {
-    margin-top: 16px;
-  }
-  .example-section {
-    margin: 12px 0;
-  }
-  .example-card {
-    max-width: 100%;
-    margin-bottom: 100%;
-  }
-  .example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
-  .colour{
-    color: #2196f3;
-  }
-  td {
-    padding-right: 8px;
-  }
-  .example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
-  .example-form {
+.mat-stepper-vertical {
+  margin-top: 8px;
+}
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+
+.example-card {
+  max-width: 100%;
+  margin-bottom: 100%;
+}
+.example-form {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
 }
-.example-full-width1 {
-    width: 15%;
-  }
-  .example-full-width2 {
-    width: 30%;
-  }
 
 .example-full-width {
   width: 100%;
 }
-  mat-form-field {
-    margin-right: 12px;
-    width: 219px;
-  }
-  .example-action-buttons {
-    padding-bottom: 20px;
-  }
-  .bg-indigo-50 {
-    --tw-bg-opacity: 1 !important;
-    background-color: rgb(238 242 255 / var(--tw-bg-opacity)) !important;
+.colour{
+  color: #2196f3;
 }
-  .example-headers-align .mat-expansion-panel-header-description {
-    justify-content: space-between;
-    align-items: center;
-  }
-  .class{
-    background-color: rgb(40, 71, 95);
-  }
-  
-  .example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
-    margin-left: 8px;
-  }
-  .mat-mdc-form-field {
-    margin-top: 16px;
-  }
-  .example-section {
-    margin: 12px 0;
-  }
-  .select-all{
-    margin: 5px 17px;
-  }
-  .example-margin {
-    margin: 0 12px;
-  }
-  button.example-custom-date-class {
-    background: orange;
-    border-radius: 100%;
-  }
-  ul {
-    list-style-type: none;
-    margin-top: 4px;
-  }
+td {
+  padding-right: 8px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.example-form {
+min-width: 150px;
+max-width: 500px;
+width: 100%;
+}
+.example-full-width1 {
+  width: 15%;
+}
+.example-full-width2 {
+  width: 30%;
+}
+
+.example-full-width {
+width: 100%;
+}
+mat-form-field {
+  margin-right: 12px;
+  width: 219px;
+}
+.example-action-buttons {
+  padding-bottom: 20px;
+}
+.bg-indigo-50 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(238 242 255 / var(--tw-bg-opacity)) !important;
+}
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+.class{
+  background-color: rgb(40, 71, 95);
+}
+
+.example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
+  margin-left: 8px;
+}
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+.example-section {
+  margin: 12px 0;
+}
+.select-all{
+  margin: 5px 17px;
+}
+.example-margin {
+  margin: 0 12px;
+}
+button.example-custom-date-class {
+  background: orange;
+  border-radius: 100%;
+}
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}
 .list {
-    width: 1403px;
-    padding-left: 6px;
-    padding-right: 5px;
-    padding-top: 4px;
-    padding-bottom: 0px;
-  }
-  .mat-mdc-form-field {
-    margin-top: 16px;
-  }
-  .new {
-    width: 100%;
-  }
-  
-  ::ng-deep .mat-form-field {
-    background-color: white !important;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
-  
-  #cHeader {
-    background:#d0dae9;
-    color: white;
-  
-  }
-  .satPop {
-    background-color: white;
-    box-shadow: 1px 1px 2px 1px #80808054;
-    padding: 10px;
-    min-width: 270px;
-    width: 270px;
-    padding-top: 14px;
-  }
-  .mat-elevation-z8{
-    width: 100%;
-  }
-  #height {
-    padding-top: 1px;
-    font-weight: bold;
-    padding-left: 3px;
-    color: black;
-    font-size: large;
+  width: 1403px;
+  padding-left: 6px;
+  padding-right: 5px;
+  padding-top: 4px;
+  padding-bottom: 0px;
+}
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+.new {
+  width: 100%;
+}
+
+::ng-deep .mat-form-field {
+  background-color: white !important;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+#cHeader {
+  background:#d0dae9;
+  color: white;
+
+}
+.satPop {
+  background-color: white;
+  box-shadow: 1px 1px 2px 1px #80808054;
+  padding: 10px;
+  min-width: 270px;
+  width: 270px;
+  padding-top: 14px;
+}
+.mat-elevation-z8{
+  width: 100%;
+}
+#height {
+  padding-top: 1px;
+  font-weight: bold;
+  padding-left: 3px;
+  color: black;
+  font-size: large;
 }
 #height1 {
-    padding-top: 3px;
-    font-weight: bold;
-    color: black;
+  padding-top: 3px;
+  font-weight: bold;
+  color: black;
 } 
 .card-hp{
-    padding-left: 720px;
-    font-size: large;
+  padding-left: 720px;
+  font-size: large;
 }
-  
-  #mainheader{
-    background:#d0dae9;
-    color: white;
-  }
-  
-  .mat-form-field {
-    display: inline-block;
-    position: relative;
-    max-width: 100%;
-    text-align: left;
-    background-color: white;
-  }
-  .grid-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .grid-item {
-    flex-basis: calc(50% - 5px); /* Adjust the value based on your desired spacing */
-  }
-  
-  
-  .headeADR {
-    background: #c8dff8;
-    color: black;
-    text-align: center;
-   
+
+#mainheader{
+  background:#d0dae9;
+  color: white;
 }
-  // .mat-form-field {
-  //     display: inline-block;
-  //     position: relative;
-  //     width: 100%;
-  //     text-align: left;
-  //     background-color: white;
-  // }
-  .example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
+
+.mat-form-field {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  text-align: left;
+  background-color: white;
+}
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.grid-item {
+  flex-basis: calc(50% - 5px); /* Adjust the value based on your desired spacing */
+}
+
+.headeADR {
+  background: #c8dff8;
+  color: black;
+  text-align: center;
+ 
+}
+// .mat-form-field {
+//     display: inline-block;
+//     position: relative;
+//     width: 100%;
+//     text-align: left;
+//     background-color: white;
+// }
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+
+.mat-table-fixed mat-header-cell:nth-child(1) {
+  min-width: 80px;
+  width: 80px;
+  display: flex;
+  background: #c8dff8;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+.mat-table-fixed mat-cell:nth-child(1) {
+  min-width: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.mat-table-fixed mat-header-cell:nth-child(2) {
+  min-width:180px;
+  width: 180px;
+  display: flex;
+  background: #c8dff8;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  border-left: 1px solid white;
+  color: black;
+}
+.mat-table-fixed mat-cell:nth-child(2) {
+  min-width: 180px;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+
+.mat-table-fixed mat-header-cell:nth-child(3) {
+  min-width: 80px;
+  width: 80px;
+   display: flex;
+  background: #c8dff8;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  border-left: 1px solid white;
+  color: black;
+}
+.mat-table-fixed mat-cell:nth-child(3) {
+  min-width: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+.mat-table-fixed mat-header-cell:nth-child(4) {
+  min-width: 80px;
+  width: 80px;
+  display: flex;
+  background: #c8dff8;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  border-left: 1px solid white;
+  color: black;
+}
+.mat-table-fixed mat-cell:nth-child(4) {
+  min-width: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  // padding-right: 5px;
+}
+.mat-table-fixed mat-header-cell:nth-child(5) {
+  min-width: 120px;
+  width: 120px;
+  display: flex;
+  background: #c8dff8;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  border-left: 1px solid white;
+  color: black;
+}
+.mat-table-fixed mat-cell:nth-child(5) {
+  min-width: 120px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  // padding-right: 5px;
+}
+.mat-table-fixed mat-header-cell:nth-child(6) {
+  min-width: 120px;
+  width: 120px;
+  display: flex;
+  background: #c8dff8;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  border-left: 1px solid white;
+  color: black;
+}
+.mat-table-fixed mat-cell:nth-child(6) {
+  min-width: 120px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  // padding-right: 5px;
+}
+.mat-table-fixed mat-header-cell:nth-child(7) {
+  min-width: 180px;
+  width: 180px;
+  display: flex;
+  background: #c8dff8;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  border-left: 1px solid white;
+  color: black;
+}
+.mat-table-fixed mat-cell:nth-child(7) {
+  min-width: 180px;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  // padding-right: 5px;
+}
+.headershift {
+  background: #01152c;
+  color: white;
+  text-align: center;
+ 
+}
+.example-h2 {
+  margin: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+table {
+  width: 100%;
+}
+.right {
+  text-align: right;
+}
+
+#columnCenter {
+  text-align: center;
+}
+
+#columnLeft {
+  text-align: left;
+}
+
+#columnRight {
+  text-align: right;
+}
+
+.cardTop {
+  margin-top: 15px;
+}
+
+.Top {
+  margin-top: 10px;
+}
+
+#table_scroll {
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+
+textarea {
+  resize: none;
+}
+
+#labelB{
+  margin-bottom: 10px;
+}
+
+mat-radio-button {
+  margin-top: 40px;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 1px;
+}
+
+tbody, td {
+  height: 0px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  ::ng-deep .mat-form-field {
+      background-color: white !important;
   }
-  
+
   .example-full-width {
-    width: 100%;
+      width: 100%;
   }
-  
-  td {
-    padding-right: 8px;
+
+  #cHeader {
+      background:#01152c;
+      color: white;
+
   }
-  
-  .mat-table-fixed mat-header-cell:nth-child(1) {
-    min-width: 80px;
-    width: 80px;
-    display: flex;
-    background: #c8dff8;
-    color: white;
-    justify-content: center;
-    text-align: center;
-    color: black;
+
+  #height {
+      padding-top: 3px;
   }
-  .mat-table-fixed mat-cell:nth-child(1) {
-    min-width: 80px;
-    width: 80px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    color: black;
+
+  .mat-form-field {
+      display: inline-block;
+      position: relative;
+      max-width: 100%;
+      text-align: left;
+      background-color: white;
   }
-  
-  .mat-table-fixed mat-header-cell:nth-child(2) {
-    min-width: 80px;
-    width: 80px;
-    display: flex;
-    background: #c8dff8;
-    color: white;
-    justify-content: center;
-    text-align: left;
-    border-left: 1px solid white;
-    color: black;
-  }
-  .mat-table-fixed mat-cell:nth-child(2) {
-    min-width: 80px;
-    width: 80px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    color: black;
-  }
-  
-  
-  .mat-table-fixed mat-header-cell:nth-child(3) {
-    min-width: 80px;
-    width: 80px;
-     display: flex;
-    background: #c8dff8;
-    color: white;
-    justify-content: center;
-    text-align: left;
-    border-left: 1px solid white;
-    color: black;
-  }
-  .mat-table-fixed mat-cell:nth-child(3) {
-    min-width: 80px;
-    width: 80px;
-    display: flex;
-    justify-content: center;
-    text-align: left;
-    color: black;
-  }
-  .mat-table-fixed mat-header-cell:nth-child(4) {
-    min-width: 80px;
-    width: 80px;
-    display: flex;
-    background: #c8dff8;
-    color: white;
-    justify-content: center;
-    text-align: left;
-    border-left: 1px solid white;
-    color: black;
-  }
-  .mat-table-fixed mat-cell:nth-child(4) {
-    min-width: 80px;
-    width: 80px;
-    display: flex;
-    justify-content: left;
-    text-align: left;
-    color: black;
-    // padding-right: 5px;
-  }
-  .mat-table-fixed mat-header-cell:nth-child(5) {
-    min-width: 80px;
-    width: 80px;
-    display: flex;
-    background: #c8dff8;
-    color: white;
-    justify-content: center;
-    text-align: left;
-    border-left: 1px solid white;
-    color: black;
-  }
-  .mat-table-fixed mat-cell:nth-child(5) {
-    min-width: 80px;
-    width: 80px;
-    display: flex;
-    justify-content: left;
-    text-align: left;
-    color: black;
-    // padding-right: 5px;
-  }
-  .mat-table-fixed mat-header-cell:nth-child(6) {
-    min-width: 80px;
-    width: 80px;
-    display: flex;
-    background: #c8dff8;
-    color: white;
-    justify-content: center;
-    text-align: left;
-    border-left: 1px solid white;
-    color: black;
-  }
-  .mat-table-fixed mat-cell:nth-child(6) {
-    min-width: 80px;
-    width: 80px;
-    display: flex;
-    justify-content: left;
-    text-align: left;
-    color: black;
-    // padding-right: 5px;
-  }
-  .headershift {
-    background: #01152c;
-    color: white;
-    text-align: center;
-   
-}
-  
+
   .right {
-    text-align: right;
+      text-align: right;
   }
-  
-  #columnCenter {
-    text-align: center;
+
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  .example {
+      background: green;
   }
-  
-  #columnLeft {
-    text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .example {
+      background:#01152c;
   }
-  
-  #columnRight {
-    text-align: right;
+}
+
+@media only screen and (min-width: 992px) {
+  .example {
+      background: orange;
   }
-  
-  .cardTop {
-    margin-top: 15px;
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .example {
+      background: pink;
   }
-  
-  .Top {
-    margin-top: 10px;
-  }
-  
-  #table_scroll {
-    overflow-x: scroll;
-    overflow-y: scroll;
-  }
-  
-  
-  textarea {
-    resize: none;
-  }
-  
-  #labelB{
-    margin-bottom: 10px;
-  }
-  
-  mat-radio-button {
-    margin-top: 40px;
-  }
-  
-  tbody, td, tfoot, th, thead, tr {
-    border-color: inherit;
-    border-style: solid;
-    border-width: 1px;
-  }
-  
-  tbody, td {
-    height: 0px;
-  }
-  
-  
-  @media only screen and (max-width: 600px) {
-    ::ng-deep .mat-form-field {
-        background-color: white !important;
-    }
-  
-    .example-full-width {
-        width: 100%;
-    }
-  
-    #cHeader {
-        background:#01152c;
-        color: white;
-  
-    }
-  
-    #height {
-        padding-top: 3px;
-    }
-  
-    .mat-form-field {
-        display: inline-block;
-        position: relative;
-        max-width: 100%;
-        text-align: left;
-        background-color: white;
-    }
-  
-    .right {
-        text-align: right;
-    }
-  
-  }
-  
-  
-  
-  @media only screen and (min-width: 600px) {
-    .example {
-        background: green;
-    }
-  }
-  
-  @media only screen and (min-width: 768px) {
-    .example {
-        background:#01152c;
-    }
-  }
-  
-  @media only screen and (min-width: 992px) {
-    .example {
-        background: orange;
-    }
-  }
-  
-  
-  @media only screen and (min-width: 1200px) {
-    .example {
-        background: pink;
-    }
-  }
+}

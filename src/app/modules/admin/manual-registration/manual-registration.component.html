@@ -117,7 +117,7 @@
 <!-- /stepper -->
 <div class="flex-auto -mt-8 p-2 sm:p-2 rounded-t-2x1  bg-card bg-default">
     <mat-card style="border-radius: 12px;">
-      <mat-stepper orientation="vertical" #stepper>
+      <mat-stepper orientation="horizontal" #stepper>
         <mat-step [stepControl]="firstFormGroup" errorMessage="required">
           <form [formGroup]="firstFormGroup">
             <ng-template matStepLabel>Personal Details</ng-template>

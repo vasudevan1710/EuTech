@@ -25,4 +25,163 @@
         </div>
     </div>
 
+    <!-- Main -->
+    <div class="flex-auto pt-6 sm:px-4 sm:pb-4 overflow-y-auto" cdkScrollable>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4">
+                <input matinput id="hrn" type="text" class="form-control" aria-describedby="emailHelp" maxlength="100"
+                    autocomplete="off">
+            </div>
+            <div class="col-sm-2" style="color: rgb(12, 82, 85);">
+                <button mat-button> Open Case</button>
+                <label id="labelDis" for="label"></label>
+                <button mat-button style="color: rgb(30, 4, 113);">Co-Manage</button>
+            </div>
+        </div>
+        <div class="row Top">
+            <mat-card class="example-cardleft rounded-2xl">
+                <div class="table-container" id="table">
+                    <mat-table [dataSource]="dataSource" class="mat-table-fixed">
+
+                        <ng-container matColumnDef="ICNo">
+                            <mat-header-cell *matHeaderCellDef> IC No
+                            </mat-header-cell>
+                            <mat-cell *matCellDef="let element"> {{element.ICNo}}</mat-cell>
+                        </ng-container>
+                        <ng-container matColumnDef="PatientName">
+                            <mat-header-cell *matHeaderCellDef> Patient Name
+                            </mat-header-cell>
+                            <mat-cell *matCellDef="let element">{{element.PatientName}} </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="Age">
+                            <mat-header-cell *matHeaderCellDef> Age
+                            </mat-header-cell>
+                            <mat-cell *matCellDef="let element">{{element.Age}} </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="QNo">
+                            <mat-header-cell *matHeaderCellDef>QNo
+                            </mat-header-cell>
+                            <mat-cell *matCellDef="let element">{{element.QNo}}
+                            </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="Remark">
+                            <mat-header-cell *matHeaderCellDef> Remark
+                            </mat-header-cell>
+                            <mat-cell *matCellDef="let element">{{element.Remark}}
+                            </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="RegTime">
+                            <mat-header-cell *matHeaderCellDef> Reg.Time
+                            </mat-header-cell>
+                            <mat-cell *matCellDef="let element">{{element.RegTime}}
+                            </mat-cell>
+                        </ng-container>
+
+                        <ng-container matColumnDef="TriageComplaints">
+                            <mat-header-cell *matHeaderCellDef> Triage Complaints
+                            </mat-header-cell>
+                            <mat-cell *matCellDef="let element">{{element.TriageComplaints}}
+                            </mat-cell>
+                        </ng-container>
+
+                        <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true">
+                        </mat-header-row>
+                        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+                    </mat-table>
+
+                </div>
+                <!-- <mat-paginator [pageSizeOptions]="[5, 10]" showFirstLastButtons
+                        aria-label="Select page of periodic elements">
+                    </mat-paginator> -->
+            </mat-card>&nbsp;
+
+        </div>
+        <div class="row Top">
+         
+            <mat-list-item
+            style="font-size:large;font-weight: 500;">Sub Queue for user:TDOCTOR    (Patient sent for text/X-Ray/Observation/Treatment)</mat-list-item>
+            <mat-card class="example-cardleft rounded-2xl">
+                <div class="row Top">
+                    <div class="col-sm-12">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="headeADR" scope="col">ICNo</th>
+                                    <th class="headeADR" scope="col">Case No</th>
+                                    <th class="headeADR" scope="col">Patient Name</th>
+                                    <th class="headeADR" scope="col">Status</th>
+                                    <th class="headeADR" scope="col">Time Started
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-success">
+                                <tr>
+                                    <td>SA 2233445</td>
+                                    <td>6908300081B
+                                    </td>
+                                    <td>MRN TEST</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                  </tr>
+                                  <tr>
+                                    <td>SA 2233446</td>
+                                    <td>6908300081B
+                                    </td>
+                                    <td>PARIS HILTON</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                  </tr>
+                                  <tr>
+                                    <td>SA 22334467</td>
+                                    <td>6908300081B
+                                    </td>
+                                    <td>@fat</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                  </tr>
+                                  <tr>
+                                    <td>SA 2233478</td>
+                                    <td>6908300081B
+                                    </td>
+                                    <td>ST TEST 13/td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                  </tr>
+                                  <tr>
+                                    <td>SA 2233489</td>
+                                    <td>6908300081B
+                                    </td>
+                                    <td>ST TEST 1343</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                  </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row Top">
+                    <section class="example-section"  style="color: rgb(30, 4, 113);">
+                        <label class="example-margin">Legend:</label>
+                        <mat-checkbox class="example-margin" style="color: rgb(30, 4, 113);" >Co-Manages Cases</mat-checkbox>
+                        <mat-checkbox class="example-margin" >Orders Completed</mat-checkbox>
+                      </section>
+                </div>
+                <!-- <mat-paginator [pageSizeOptions]="[5, 10]" showFirstLastButtons
+                        aria-label="Select page of periodic elements">
+                    </mat-paginator> -->
+            </mat-card>&nbsp;
+
+        </div>
+
+    </div>
+
+</div>
+
     

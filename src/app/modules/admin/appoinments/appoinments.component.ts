@@ -15,9 +15,6 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./appoinments.component.scss']
 })
 export class AppoinmentsComponent implements OnInit {
-  myDateValue!: Date ;
-  // public routes = routes;
-  date = new Date();
   // verticalStepperForm: UntypedFormGroup;
   panelColor = new FormControl('red');
   panelColor1 = new FormControl('red');
@@ -28,29 +25,13 @@ export class AppoinmentsComponent implements OnInit {
   checked = true;
   @ViewChild(MatAccordion) accordion: MatAccordion;
 
-  minDate: Date;
-  maxDate: Date;
-
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  constructor(private _formBuilder: FormBuilder,public dialog: MatDialog) { 
-    const currentYear = new Date().getFullYear();
-    this.minDate = new Date(currentYear - 20, 0, 1);
-    this.maxDate = new Date(currentYear + 1, 11, 31);
-  }
-  myFilter = (d: Date | null): boolean => {
-    const day = (d || new Date()).getDay();
-    // Prevent Saturday and Sunday from being selected.
-    return day !== 0 && day !== 6;
-  };
+  constructor(private _formBuilder: FormBuilder,public dialog: MatDialog) { }
   toppings = new FormControl('');
-
+  @ViewChild(MatPaginator) paginator: MatPaginator;
   toppingList: string[] = ['Email', 'Hand Phone(SMS)', 'Pager'];
   ngOnInit(): void {
-    this.myDateValue = new Date();
-
-}
-onDateChange(newDate: Date) {
-  console.log(newDate);
+    this.dataSource.paginator = this.paginator;
 }
 
 firstFormGroup = this._formBuilder.group({
@@ -73,18 +54,26 @@ sixFormGroup = this._formBuilder.group({
   secondCtrl: ['', Validators.required],
 });
 
-@ViewChild(MatPaginator) _paginator!:MatPaginator;
+// @ViewChild(MatPaginator) _paginator!:MatPaginator;
 @ViewChild(MatSort) _sort!:MatSort;
 
-displayedColumns: string[] = ['Desc', 'Start', 'End','%Sts','Lmt','TB'];
-dataSource: any = new MatTableDataSource([ELEMENT_DATA]);
+displayedColumns: string[] = ['ICNo', 'PatientName', 'Age','QNo','Remark','RegTime','TriageComplaints'];
+dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-displayedColumns1: string[] = ['Starttime', 'SlotBooking','TotNc', 'TotFp'];
+public matTableConfig(tableRecords: any[]): void {
+  this.dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  this.dataSource.paginator=this.paginator;
+  this.dataSource.sort=this._sort;
+}
+displayedColumns1: string[] = ['SuspectDrug', 'ParentDrug','DrugAllergy', 'Startdate','EndDate'];
 dataSource1: any = new MatTableDataSource([]);
 objAction: any = {
   isEditing: false,
   isView: false
 };
+
+// displayedColumns: string[] = ['Altername', 'Status', 'Startdate','EndDate'];
+// dataSource: any = new MatTableDataSource([]);
 
 unChangedAction: any = {
   isEditing: false,
@@ -132,16 +121,28 @@ focusFlag: boolean = false;
 
 }
 
-
-  
-  
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-];
 export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  ICNo: string;
+  PatientName: string;
+  Age: number;
+  QNo: string;
+  Remark: string;
+  RegTime: string;
+  TriageComplaints: string;
 }
+export interface PeriodicElement1 {
+  ICNo: string;
+  PatientName: string;
+  CaseNo: string;
+  Status: string;
+  TimeStarted: string;
+  TriageComplaints: string;
+}
+const ELEMENT_DATA: PeriodicElement[] = [
+  {ICNo: 'SA 4815962', PatientName: 'TAN KOK MENG PAUL', Age: 24, QNo: 'Amb',Remark:'',RegTime:'14.40.00',TriageComplaints:''},
+  {ICNo: 'SA 4815963', PatientName: 'SEAH AYAM THNG', Age: 43, QNo: 'Amb',Remark:'',RegTime:'12:45:00',TriageComplaints:''},
+  {ICNo: 'SA 4815964', PatientName: 'KHASMEIR', Age: 43, QNo: 'Amb',Remark:'',RegTime:'12:45:00',TriageComplaints:''},
+  {ICNo: 'SA 4815965', PatientName: 'KHASMEIR', Age: 43, QNo: 'Amb',Remark:'',RegTime:'12:45:00',TriageComplaints:''},
+  {ICNo: 'SA 481594', PatientName: 'KHASMEIR', Age: 43, QNo: 'Amb',Remark:'',RegTime:'12:45:00',TriageComplaints:''},
+
+];
