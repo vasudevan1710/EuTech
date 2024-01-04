@@ -34,10 +34,13 @@
                 <input matinput id="hrn" type="text" class="form-control" aria-describedby="emailHelp" maxlength="100"
                     autocomplete="off">
             </div>
-            <div class="col-sm-2" style="color: rgb(12, 82, 85);">
-                <button mat-button> Open Case</button>
-                <label id="labelDis" for="label"></label>
-                <button mat-button style="color: rgb(30, 4, 113);">Co-Manage</button>
+            <div class="col-sm-2">
+               
+                <mat-tab-group >
+                    <mat-tab label="New Appointment" style="color: rgb(30, 4, 113);"></mat-tab>
+                    <mat-tab label="Manage Appointment" style="color: rgb(12, 82, 85);"></mat-tab>
+                   
+                  </mat-tab-group>
             </div>
         </div>
         <div class="row Top">

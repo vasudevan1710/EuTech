@@ -15,20 +15,6 @@ import { PatientsService } from 'app/modules/Service/patients.service';
   ],
 })
 export class ManualRegistrationComponent {
-  
-  
-  firstFormGroup = this._formBuilder.group({
-    basicCtrl: ['', Validators.required],
-    firstCtrl: ['', Validators.required],
-  });
-  secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
-  });
-  thirdFormGroup = this._formBuilder.group({
-    thirdCtrl: ['', Validators.required],
-  });
-
- 
   isLinear = false;
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
