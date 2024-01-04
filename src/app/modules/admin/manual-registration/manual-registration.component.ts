@@ -1,6 +1,7 @@
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PatientsService } from 'app/modules/Service/patients.service';
 
 @Component({
   selector: 'manual-registration',
@@ -14,6 +15,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   ],
 })
 export class ManualRegistrationComponent {
+  
   
   firstFormGroup = this._formBuilder.group({
     basicCtrl: ['', Validators.required],
@@ -30,7 +32,36 @@ export class ManualRegistrationComponent {
   isLinear = false;
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(private _formBuilder: FormBuilder,private fb: FormBuilder,private patients:PatientsService) {}
+  myForm: FormGroup;
+  ngOnInit() {
+    this.myForm = this.fb.group({
+      icNumber: [''],
+      gender: [''],
+      hrn: [''],
+      nursing: [''],
+      mr: [''],
+      name: [''],
+      sex: [''],
+      dob: [''],
+      age: [''],
+      wardBed: [''],
+    });
+  }
+
+  onSubmit() {
+    this.patients.addPatient(this.myForm.value).subscribe({
+      next: (data: any) => {
+        // Handle successful response
+        console.log(data);
+      },
+      error: (error: any) => {
+        // Handle error
+        console.error(error);
+      }
+    });
+  }
+  
 }
 export interface PeriodicElement {
   name: string;

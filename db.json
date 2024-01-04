@@ -1,0 +1,30 @@
+{
+  "patients": [
+    {
+      "icNumber": "",
+      "gender": "",
+      "hrn": "",
+      "nursing": "",
+      "mr": "",
+      "name": "",
+      "sex": "",
+      "dob": "",
+      "age": "",
+      "wardBed": "",
+      "id": 1
+    },
+    {
+      "icNumber": "4657344",
+      "gender": "",
+      "hrn": "wei2323122",
+      "nursing": "two",
+      "mr": "",
+      "name": "askfjsoizx",
+      "sex": "others",
+      "dob": "2023-12-17T18:30:00.000Z",
+      "age": 16,
+      "wardBed": "dtaedf",
+      "id": 2
+    }
+  ]
+}

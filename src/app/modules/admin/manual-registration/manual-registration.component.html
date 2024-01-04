@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" >
 <body>
     <div
     class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-4 sm:px-10 border-b  dark:bg-transparent">
@@ -16,6 +17,7 @@
             </h2>
         </div>
     </div>
+   
     <!-- Actions -->
     <div class="flex flex-shrink-0 items-center mt-6 sm:mt-0 sm:ml-4">
         <button mat-stroked-button style="color: #4F46E5;">
@@ -28,6 +30,7 @@
             Save
         </button>
     </div>
+    
 </div>
     <div class="flex-auto -mt-8 p-2 sm:p-2 rounded-t-2x1  bg-card bg-default">
       <mat-card style="border-radius: 12px;"> 
@@ -37,22 +40,22 @@
     <div class="col-sm-3">
     <mat-form-field  style="width: 20%;">
             <mat-label>IC#</mat-label>
-            <input matInput type="text" class="form-control" maxlength="10" autocomplete="off">
+            <input matInput type="text" class="form-control" maxlength="10" autocomplete="off" formControlName="icNumber">
         </mat-form-field>
         <mat-form-field style="width: 12%;">
           <mat-label>Title</mat-label>
           <mat-select>
-            <mat-option value="one">MR</mat-option>
-            <mat-option value="two">MRS</mat-option>
+            <mat-option value="MR">MR</mat-option>
+            <mat-option value="MRS">MRS</mat-option>
         </mat-select>
       </mat-form-field>
     <mat-form-field style="width: 25%;">
         <mat-label>Name</mat-label>
-        <input matInput type="any" maxlength="100">
+        <input matInput type="any" maxlength="100" formControlName="name">
     </mat-form-field>
     <mat-form-field  style="width: 30%;">
       <mat-label>HRN</mat-label>
-      <input matInput type="text" class="form-control" maxlength="10" autocomplete="off">
+      <input matInput type="text" class="form-control" maxlength="10" autocomplete="off" formControlName="hrn">
   </mat-form-field>
   </div>  
           </div> 
@@ -61,7 +64,7 @@
         <div class="col-sm-3">
           <mat-form-field style="width: 20%;">
             <mat-label>Nursing</mat-label>
-            <mat-select>
+            <mat-select formControlName="nursing">
               <mat-option value="one">1</mat-option>
               <mat-option value="two">2</mat-option>
           </mat-select>
@@ -77,29 +80,30 @@
         <div class="col-sm-3">
           <mat-form-field style="width: 20%;">
             <mat-label>Date Of Birth</mat-label>
-            <input matInput [matDatepicker]="picker">
+            <input matInput [matDatepicker]="picker" formControlName="dob">
             <mat-datepicker-toggle style="translate: 100%;" matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
         <mat-form-field style="width: 20%;" >
             <mat-label>Age</mat-label>
-            <input matInput type="number">
+            <input matInput type="number" formControlName="age" >
         </mat-form-field>
         <mat-form-field style="width: 20%;">
             <mat-label>Sex</mat-label>
-            <mat-select>
-              <mat-option value="one">Male</mat-option>
-              <mat-option value="two">Female</mat-option>
-              <mat-option value="three">Others</mat-option>
+            <mat-select formControlName="sex">
+              <mat-option value="male">Male</mat-option>
+              <mat-option value="female">Female</mat-option>
+              <mat-option value="others">Others</mat-option>
           </mat-select>
         </mat-form-field>
         
         <mat-form-field style="width: 28%;" >
           <mat-label>Ward/Bed</mat-label>
-          <input matInput type="text">
+          <input matInput type="text" formControlName="wardBed">
       </mat-form-field>
-     
+   
         </div>
+      
     </div>
   
   </div>
@@ -471,4 +475,5 @@
     </mat-card>
 </div>
 </body>
+</form>
 </html>
