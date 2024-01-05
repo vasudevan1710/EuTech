@@ -1,6 +1,7 @@
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatTabGroup } from '@angular/material/tabs';
 import { PatientsService } from 'app/modules/Service/patients.service';
 
 @Component({
@@ -15,6 +16,32 @@ import { PatientsService } from 'app/modules/Service/patients.service';
   ],
 })
 export class ManualRegistrationComponent {
+
+  nextTab(tabGroup: MatTabGroup): void {
+    const selectedIndex = tabGroup.selectedIndex;
+    const tabCount = tabGroup._tabs.length;
+
+    // Check if there's a next tab
+    if (selectedIndex < tabCount - 1) {
+      // Increment the selected index to move to the next tab
+      tabGroup.selectedIndex = selectedIndex + 1;
+    }
+  }
+
+  backTab(tabGroup: MatTabGroup): void {
+    const selectedIndex = tabGroup.selectedIndex;
+
+    // Check if there's a previous tab
+    if (selectedIndex > 0) {
+      // Decrement the selected index to move to the previous tab
+      tabGroup.selectedIndex = selectedIndex - 1;
+    }
+  }
+
+
+
+
+
   isLinear = false;
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
