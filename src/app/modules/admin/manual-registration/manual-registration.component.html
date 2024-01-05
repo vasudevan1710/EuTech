@@ -44,7 +44,7 @@
         </mat-form-field>
        
     <mat-form-field style="width: 25%;">
-        <mat-label>Identifier</mat-label>
+        <mat-label>Id No</mat-label>
         <input matInput type="any" maxlength="100" formControlName="name">
     </mat-form-field>
     <mat-form-field  style="width: 30%;">
@@ -63,7 +63,7 @@
               <mat-option value="two">2</mat-option>
           </mat-select>
         </mat-form-field>
-      <mat-form-field style="width: 70%;">
+      <mat-form-field style="width: 55%;">
         <mat-label>Name</mat-label>
         <input matInput type="any" maxlength="100">
     </mat-form-field>
@@ -90,11 +90,6 @@
               <mat-option value="others">Others</mat-option>
           </mat-select>
         </mat-form-field>
-        
-        <mat-form-field style="width: 28%;" >
-          <mat-label>Race</mat-label>
-          <input matInput type="text" formControlName="wardBed">
-      </mat-form-field>
    
         </div>
       
@@ -112,299 +107,231 @@
 <!-- <--Tab-->
 <div class="flex-auto -mt-8 p-2 sm:p-2 rounded-t-2x1  bg-card bg-default">
   <mat-card style="border-radius: 12px;">
-<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" >
+<mat-tab-group #tabGroup mat-stretch-tabs="false" mat-align-tabs="start" >
   <mat-tab>
-    <ng-template mat-tab-label ><b>Personal Details</b></ng-template>
+    <ng-template mat-tab-label ><h1>Personal Details</h1></ng-template>
     <mat-list-item
-    style="font-size:large;font-weight: 600;">Address 1</mat-list-item>
-<mat-divider></mat-divider>
-<div  class="card-body">
-
-        <div class="col-sm-4">
-          <mat-form-field style="width: 28%;" >
-            <mat-label>Block House</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        
-        
-          <mat-form-field style="width: 28%;" >
-            <mat-label>Street</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-       
-        
-          <mat-form-field style="width: 28%;" >
-            <mat-label>Unit</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        <mat-form-field style="width: 20%;" >
-          <mat-label>Postal Code</mat-label>
-          <input matInput type="text">
-      </mat-form-field>
-      <mat-form-field style="width: 20%;" >
-        <mat-label>Country</mat-label>
-        <mat-select>
-          <mat-option value="one">Male</mat-option>
-          <mat-option value="two">Female</mat-option>
-          <mat-option value="three">Others</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Building</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-    <mat-form-field style="width: 28%;">
-      <mat-label>City</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-        </div>
-    </div>
-    <mat-list-item
-    style="font-size:large;font-weight: 600;">Address 2</mat-list-item>
-<mat-divider></mat-divider>
-<div  class="card-body">
-
-        <div class="col-sm-4">
-          <mat-form-field style="width: 28%;" >
-            <mat-label>Block House</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        
-        
-          <mat-form-field style="width: 28%;" >
-            <mat-label>Street</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-       
-        
-          <mat-form-field style="width: 28%;" >
-            <mat-label>Unit</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        <mat-form-field style="width: 20%;" >
-          <mat-label>Postal Code</mat-label>
-          <input matInput type="text">
-      </mat-form-field>
-      <mat-form-field style="width: 20%;" >
-        <mat-label>Country</mat-label>
-        <mat-select>
-          <mat-option value="one">Male</mat-option>
-          <mat-option value="two">Female</mat-option>
-          <mat-option value="three">Others</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Building</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-    <mat-form-field style="width: 28%;">
-      <mat-label>City</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-        </div>
-    </div>
-    <mat-list-item
-    style="font-size:large;font-weight: 600;">Address 3</mat-list-item>
-<mat-divider></mat-divider>
-<div  class="card-body">
-
-        <div class="col-sm-4">
-          <mat-form-field style="width: 28%;" >
-            <mat-label>Block House</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        
-        
-          <mat-form-field style="width: 28%;" >
-            <mat-label>Street</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-       
-        
-          <mat-form-field style="width: 28%;" >
-            <mat-label>Unit</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        <mat-form-field style="width: 20%;" >
-          <mat-label>Postal Code</mat-label>
-          <input matInput type="text">
-      </mat-form-field>
-      <mat-form-field style="width: 20%;" >
-        <mat-label>Country</mat-label>
-        <mat-select>
-          <mat-option value="one">Male</mat-option>
-          <mat-option value="two">Female</mat-option>
-          <mat-option value="three">Others</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Building</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-    <mat-form-field style="width: 28%;">
-      <mat-label>City</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-        </div>
-    </div>
-    <mat-list-item
-    style="font-size:large;font-weight: 600;">Address 4</mat-list-item>
-<mat-divider></mat-divider>
-<div  class="card-body">
-
-        <div class="col-sm-4">
-          <mat-form-field style="width: 28%;" >
-            <mat-label>Block House</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        
-        
-          <mat-form-field style="width: 28%;" >
-            <mat-label>Street</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-       
-        
-          <mat-form-field style="width: 28%;" >
-            <mat-label>Unit</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        <mat-form-field style="width: 20%;" >
-          <mat-label>Postal Code</mat-label>
-          <input matInput type="text">
-      </mat-form-field>
-      <mat-form-field style="width: 20%;" >
-        <mat-label>Country</mat-label>
-        <mat-select>
-          <mat-option value="one">Male</mat-option>
-          <mat-option value="two">Female</mat-option>
-          <mat-option value="three">Others</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Building</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-    <mat-form-field style="width: 28%;">
-      <mat-label>City</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-        </div>
-    </div>
-
-    <p>Personal Details</p>
-    <div class="patient-1">
-    <mat-form-field >
+    style="font-size:large;font-weight: 600;">Personal Details</mat-list-item>
+    
+    <div class="col-sm-4">
+    <mat-form-field style="width: 25%;" >
       <mat-label>E-mail</mat-label>
       <input matInput type="email" required>
     </mat-form-field>
-    <mat-form-field >
-        <mat-label>Mobile</mat-label>
+    <mat-form-field style="width: 20%;" >
+      <mat-label>Religion</mat-label>
+      <mat-select>
+        <mat-option value="one">Hindu</mat-option>
+        <mat-option value="two">Muslim</mat-option>
+        <mat-option value="three">Christian</mat-option>
+    </mat-select>
+  </mat-form-field>
+<mat-form-field style="width: 20%;" >
+  <mat-label>Country</mat-label>
+  <mat-select>
+    <mat-option value="one">Indian</mat-option>
+    <mat-option value="two">Thai</mat-option>
+    <mat-option value="three">Chinese</mat-option>
+</mat-select>
+</mat-form-field>
+<mat-form-field style="width: 20%;" >
+  <mat-label>Nationality</mat-label>
+  <mat-select>
+    <mat-option value="one">Indian</mat-option>
+    <mat-option value="two">Thai</mat-option>
+    <mat-option value="three">Chinese</mat-option>
+</mat-select>
+</mat-form-field>
+    </div>
+    <div class="col-sm-4">
+<mat-form-field style="width: 25%;" >
+  <mat-label>Race</mat-label>
+  <mat-select>
+    <mat-option value="one">Ceylonese</mat-option>
+    <mat-option value="two">Japanese</mat-option>
+    <mat-option value="three">Others</mat-option>
+</mat-select>
+</mat-form-field>
+<mat-form-field style="width: 20%;" >
+  <mat-label>Marital Status</mat-label>
+  <mat-select>
+    <mat-option value="one">Single</mat-option>
+    <mat-option value="two">Married</mat-option>
+</mat-select>
+</mat-form-field>
+<mat-form-field style="width: 20%;" >
+  <mat-label>Blood Group</mat-label>
+  <mat-select>
+    <mat-option value="one">O-Positive</mat-option>
+    <mat-option value="two">O-Negative</mat-option>
+    <mat-option value="three">AB-Positive</mat-option>
+    <mat-option value="three">AB-Negative</mat-option>
+</mat-select>
+</mat-form-field>
+<mat-form-field style="width: 20%;">
+  <mat-label>Patient Type</mat-label>
+  <mat-select>
+      <mat-option value="one">VIP</mat-option>
+      <mat-option value="two">General</mat-option>
+  </mat-select>
+</mat-form-field>
+    </div>
+    <div class="col-sm-4">
+      <mat-form-field style="width: 25%;">
+        <mat-label>Residential</mat-label>
+        <input matInput type="text"  required>
+      </mat-form-field>
+      <mat-form-field style="width: 20%;" >
+        <mat-label>Telephone 1</mat-label>
         <input matInput type="tel"  required>
       </mat-form-field>
-      <mat-form-field >
-        <mat-label>Patient Type</mat-label>
-        <mat-select>
-            <mat-option value="one">VIP</mat-option>
-            <mat-option value="two">General</mat-option>
-        </mat-select>
+      <mat-form-field style="width: 20%;" >
+        <mat-label>Telephone 2</mat-label>
+        <input matInput type="tel"  required>
       </mat-form-field>
+      <mat-form-field style="width: 20%;" >
+        <mat-label>Hand Phone</mat-label>
+        <input matInput type="tel"  required>
+      </mat-form-field>
+    
+    </div>
+      <div class="col-sm-4">
+      <mat-form-field style="width: 22%;">
+        <mat-label>Address 1</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+      <mat-form-field style="width: 22%;">
+        <mat-label>Address 2</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+      <mat-form-field style="width: 22%;">
+        <mat-label>Address 3</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+      <mat-form-field style="width: 22%;">
+        <mat-label>Address 4</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+      <mat-form-field style="width: 20%;" >
+        <mat-label>Place of Birth</mat-label>
+        <mat-select>
+          <mat-option value="one">Singapore</mat-option>
+          <mat-option value="two">Malaysia</mat-option>
+          <mat-option value="three">India</mat-option>
+      </mat-select>
+    </mat-form-field>
+     <mat-checkbox style="bottom: 20px; translate: 20px;" class="example-margin">Alpha Numeric</mat-checkbox>
       </div>
-        <p class="title">Proof of Resident Details</p>
+     
+      <br>
+      <br>
+      <mat-list-item
+      style="font-size:large;font-weight: 600;">Proof of Residential Details</mat-list-item>
+      
+        <mat-divider></mat-divider>
+        <br>
+        <mat-checkbox class="pl-10">Resident</mat-checkbox>
         <div class="patient-1">
-            <mat-checkbox class="example-margin">Resident</mat-checkbox>
-            <mat-form-field >
+            
+            <mat-form-field style="width: 22%;">
                 <mat-label>Identity Doc.</mat-label>
                 <mat-select>
                     <mat-option value="one">Aadhar</mat-option>
                     <mat-option value="two">Driving Licence</mat-option>
                 </mat-select>
               </mat-form-field>
-              <mat-form-field >
-                <mat-label>ForeignIC#</mat-label>
+              <mat-form-field style="width: 22%;">
+                <mat-label>Foreign IC #</mat-label>
                 <input matInput type="text">
             </mat-form-field>
-            <mat-form-field >
+            <mat-form-field style="width: 22%;">
                 <mat-label>Doc#</mat-label>
                 <input matInput type="text">
             </mat-form-field>
-            <mat-form-field >
+            <mat-form-field style="width: 22%;">
                 <mat-label>Recall Date</mat-label>
-                <input matInput [matDatepicker]="pickdate">
-      <mat-datepicker-toggle matIconSuffix [for]="pickdate"></mat-datepicker-toggle>
-      <mat-datepicker #pickdate></mat-datepicker>
+                <input matInput [matDatepicker]="picking">
+      <mat-datepicker-toggle style="translate: 100%;" matIconSuffix [for]="picking"></mat-datepicker-toggle>
+      <mat-datepicker #picking></mat-datepicker>
             </mat-form-field>
             </div>
     <div class="button">
-      <button mat-button>Next</button>
+      <button mat-raised-button color="primary" (click)="nextTab(tabGroup)">Next</button>
     </div>
   </mat-tab>
   <mat-tab>
-    <ng-template mat-tab-label ><b>Additional Details</b></ng-template>
-      <p><b>Emergency Contact Details</b></p>
+    <ng-template mat-tab-label ><h1>Additional Details</h1></ng-template>
+      <b>Emergency Contact Details</b>
+      <mat-divider></mat-divider>
       <div class="patient-1">
-      <mat-form-field >
+        <mat-form-field style="width: 22%;">
           <mat-label>Contact Person</mat-label>
           <input matInput type="tel" required>
         </mat-form-field>
-        <mat-form-field >
+        <mat-form-field style="width: 22%;">
           <mat-label>Fax</mat-label>
           <input matInput type="fax" required>
         </mat-form-field>
-        <mat-form-field >
+        <mat-form-field style="width: 22%;">
           <mat-label>Residential tel</mat-label>
           <input matInput type="tel" required>
         </mat-form-field>
-        <mat-form-field >
+        <mat-form-field style="width: 22%;">
           <mat-label>Office tel</mat-label>
           <input matInput type="tel" required>
         </mat-form-field>
-        <p><b>Employment Details</b></p>
-        <mat-form-field >
+        <h2><b>Employment Details</b></h2>
+        <mat-divider></mat-divider>
+        <mat-form-field style="width: 22%;">
           <mat-label>Previous Total Deposit</mat-label>
           <input matInput type="number">
       </mat-form-field>
-      <mat-form-field >
+      <mat-form-field style="width: 22%;">
           <mat-label>Subsidy Group</mat-label>
           <input matInput type="number">
       </mat-form-field>
-      <mat-form-field >
+      <mat-form-field style="width: 22%;">
           <mat-label>Billing Account</mat-label>
           <input matInput type="text">
       </mat-form-field>
-      <mat-form-field >
+      <mat-form-field style="width: 22%;">
           <mat-label>Previous Total Dues</mat-label>
           <input matInput type="number">
       </mat-form-field>
 
-      <p><b>Medical Details</b></p>
-      <mat-form-field >
+      <h2><b>Medical Details</b></h2>
+      <mat-divider></mat-divider>
+      <mat-form-field style="width: 22%;">
         <mat-label>Medical Record</mat-label>
         <input matInput type="text">
     </mat-form-field>
-    <mat-form-field >
-        <mat-label>Last Visit</mat-label>
-        <input matInput type="date">
-    </mat-form-field>
-    <mat-form-field >
-        <mat-label>Recall Date</mat-label>
-        <input matInput type="date">
-    </mat-form-field>
-    <mat-form-field >
+    <mat-form-field style="width: 22%;">
+      <mat-label>Recall Date</mat-label>
+      <input matInput [matDatepicker]="picked">
+<mat-datepicker-toggle style="translate: 100%;" matIconSuffix [for]="picked"></mat-datepicker-toggle>
+<mat-datepicker #picked></mat-datepicker>
+  </mat-form-field>
+    <mat-form-field style="width: 22%;">
+      <mat-label>Recall Date</mat-label>
+      <input matInput [matDatepicker]="pickdate">
+<mat-datepicker-toggle style="translate: 100%;" matIconSuffix [for]="pickdate"></mat-datepicker-toggle>
+<mat-datepicker #pickdate></mat-datepicker>
+  </mat-form-field>
+    <mat-form-field style="width: 22%;">
         <mat-label>Patient Status</mat-label>
         <input matInput type="text">
     </mat-form-field>
-    <mat-form-field >
+    <mat-form-field style="width: 22%;">
       <mat-label>Wavier reference</mat-label>
       <input matInput type="text">
   </mat-form-field>
   </div>
   <div class="patient-1">
-  <mat-form-field >
+    <mat-form-field style="width: 22%;">
       <mat-label>Recall Period</mat-label>
       <input matInput type="text">
   </mat-form-field>
-  <mat-form-field >
+  <mat-form-field style="width: 22%;">
       <mat-label>Wavier Group</mat-label>
       <mat-select>
           <mat-option value="one">Known</mat-option>
@@ -417,12 +344,13 @@
   </mat-form-field>
   </div>
       <div class="button">
-        <button mat-button>Back</button>
-        <button mat-button>Next</button>
+        <button mat-raised-button color="primary" (click)="backTab(tabGroup)">Back</button>
+        <button mat-raised-button color="primary" (click)="nextTab(tabGroup)">Next</button>
       </div>
     </mat-tab>
   <mat-tab>
-    <ng-template mat-tab-label ><b>Name of the Kin</b></ng-template>
+    <ng-template mat-tab-label ><h1>Name of the Kin</h1></ng-template>
+    <mat-divider></mat-divider>
         <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
           <!-- Position Column -->
           <ng-container matColumnDef="name">
@@ -457,8 +385,8 @@
                  required>
         </mat-form-field>
       <div class="button">
-        <button mat-button>Back</button>
-        <button mat-button>Next</button>
+        <button mat-raised-button color="primary" (click)="backTab(tabGroup)">Back</button>
+        <button mat-raised-button color="primary">Submit</button>
       </div>
   </mat-tab>
   </mat-tab-group>
