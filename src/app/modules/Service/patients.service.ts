@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PatientsService {
-  private apiUrl = 'http://192.168.0.127/api/visitmgmt/Patient/InitSearch?Codes=SX';
+  private apiUrl = '/api/visitmgmt/Patient/InitSearch?Codes=SX';
 
   constructor(private http: HttpClient) {}
 
@@ -17,8 +17,8 @@ export class PatientsService {
   }
 
   // Read
-  getPatients(): Observable<Patient[]> {
-    return this.http.get<Patient[]>(this.apiUrl);
+  getPatients(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
   }
 
   getPatientById(patientId: number): Observable<Patient> {
