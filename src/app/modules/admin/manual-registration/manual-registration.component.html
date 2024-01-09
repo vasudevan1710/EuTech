@@ -40,16 +40,16 @@
     <div class="col-sm-3">
     <mat-form-field  style="width: 20%;">
             <mat-label>IC#</mat-label>
-            <input matInput type="text" class="form-control" maxlength="10" autocomplete="off" formControlName="icNumber">
+            <input matInput type="text" class="form-control" maxlength="10" autocomplete="off" formControlName="Hrn">
         </mat-form-field>
        
     <mat-form-field style="width: 25%;">
         <mat-label>Id No</mat-label>
-        <input matInput type="any" maxlength="100" formControlName="name">
+        <input matInput type="any" maxlength="100" formControlName="Idno">
     </mat-form-field>
     <mat-form-field  style="width: 30%;">
       <mat-label>HRN</mat-label>
-      <input matInput type="text" class="form-control" maxlength="10" autocomplete="off" formControlName="hrn">
+      <input matInput type="text" class="form-control" maxlength="10" autocomplete="off" formControlName="Hrn">
   </mat-form-field>
   </div>  
           </div> 
@@ -65,7 +65,7 @@
         </mat-form-field>
       <mat-form-field style="width: 55%;">
         <mat-label>Name</mat-label>
-        <input matInput type="any" maxlength="100">
+        <input matInput type="any" maxlength="100" formControlName="Name">
     </mat-form-field>
    
         </div>
@@ -75,7 +75,7 @@
         <div class="col-sm-3">
           <mat-form-field style="width: 20%;">
             <mat-label>Date Of Birth</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName="dob">
+            <input matInput [matDatepicker]="picker" formControlName="Dob">
             <mat-datepicker-toggle style="translate: 100%;" matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
@@ -85,7 +85,7 @@
         </mat-form-field>
         <mat-form-field style="width: 20%;">
             <mat-label>Sex</mat-label>
-            <mat-select formControlName="sex">
+            <mat-select formControlName="Sex">
               <mat-option value="male">Male</mat-option>
               <mat-option value="female">Female</mat-option>
               <mat-option value="others">Others</mat-option>
@@ -117,11 +117,11 @@
     <div class="col-sm-4">
     <mat-form-field style="width: 25%;" >
       <mat-label>E-mail</mat-label>
-      <input matInput type="email" required>
+      <input matInput type="email" required formControlName="Email">
     </mat-form-field>
     <mat-form-field style="width: 20%;" >
       <mat-label>Religion</mat-label>
-      <mat-select>
+      <mat-select formControlName="Religion">
         <mat-option value="one">Hindu</mat-option>
         <mat-option value="two">Muslim</mat-option>
         <mat-option value="three">Christian</mat-option>
@@ -129,7 +129,7 @@
   </mat-form-field>
 <mat-form-field style="width: 20%;" >
   <mat-label>Country</mat-label>
-  <mat-select>
+  <mat-select formControlName="Country">
     <mat-option value="one">Indian</mat-option>
     <mat-option value="two">Thai</mat-option>
     <mat-option value="three">Chinese</mat-option>
@@ -137,7 +137,7 @@
 </mat-form-field>
 <mat-form-field style="width: 20%;" >
   <mat-label>Nationality</mat-label>
-  <mat-select>
+  <mat-select formControlName="Nationality">
     <mat-option value="one">Indian</mat-option>
     <mat-option value="two">Thai</mat-option>
     <mat-option value="three">Chinese</mat-option>
@@ -147,7 +147,7 @@
     <div class="col-sm-4">
 <mat-form-field style="width: 25%;" >
   <mat-label>Race</mat-label>
-  <mat-select>
+  <mat-select formControlName="Race">
     <mat-option value="one">Ceylonese</mat-option>
     <mat-option value="two">Japanese</mat-option>
     <mat-option value="three">Others</mat-option>
@@ -155,14 +155,14 @@
 </mat-form-field>
 <mat-form-field style="width: 20%;" >
   <mat-label>Marital Status</mat-label>
-  <mat-select>
+  <mat-select formControlName="MaritalStatus">
     <mat-option value="one">Single</mat-option>
     <mat-option value="two">Married</mat-option>
 </mat-select>
 </mat-form-field>
 <mat-form-field style="width: 20%;" >
   <mat-label>Blood Group</mat-label>
-  <mat-select>
+  <mat-select formControlName="BloodGroup">
     <mat-option value="one">O-Positive</mat-option>
     <mat-option value="two">O-Negative</mat-option>
     <mat-option value="three">AB-Positive</mat-option>
@@ -171,7 +171,7 @@
 </mat-form-field>
 <mat-form-field style="width: 20%;">
   <mat-label>Patient Type</mat-label>
-  <mat-select>
+  <mat-select >
       <mat-option value="one">VIP</mat-option>
       <mat-option value="two">General</mat-option>
   </mat-select>
@@ -184,38 +184,38 @@
       </mat-form-field>
       <mat-form-field style="width: 20%;" >
         <mat-label>Telephone 1</mat-label>
-        <input matInput type="tel"  required>
+        <input matInput type="tel"  required formControlName="Tel">
       </mat-form-field>
       <mat-form-field style="width: 20%;" >
         <mat-label>Telephone 2</mat-label>
-        <input matInput type="tel"  required>
+        <input matInput type="tel"  required formControlName="Tel2">
       </mat-form-field>
       <mat-form-field style="width: 20%;" >
         <mat-label>Hand Phone</mat-label>
-        <input matInput type="tel"  required>
+        <input matInput type="tel"  required formControlName="Tel3">
       </mat-form-field>
     
     </div>
       <div class="col-sm-4">
       <mat-form-field style="width: 22%;">
         <mat-label>Address 1</mat-label>
-        <textarea matInput></textarea>
+        <textarea matInput formControlName="Address1"></textarea>
       </mat-form-field>
       <mat-form-field style="width: 22%;">
         <mat-label>Address 2</mat-label>
-        <textarea matInput></textarea>
+        <textarea matInput formControlName="Address2"></textarea>
       </mat-form-field>
       <mat-form-field style="width: 22%;">
         <mat-label>Address 3</mat-label>
-        <textarea matInput></textarea>
+        <textarea matInput formControlName="Address3"></textarea>
       </mat-form-field>
       <mat-form-field style="width: 22%;">
         <mat-label>Address 4</mat-label>
-        <textarea matInput></textarea>
+        <textarea matInput formControlName="Address4"></textarea>
       </mat-form-field>
       <mat-form-field style="width: 20%;" >
         <mat-label>Place of Birth</mat-label>
-        <mat-select>
+        <mat-select formControlName="PlaceOfBirth">
           <mat-option value="one">Singapore</mat-option>
           <mat-option value="two">Malaysia</mat-option>
           <mat-option value="three">India</mat-option>
@@ -341,7 +341,7 @@
   </mat-form-field>
   <mat-form-field style="width: 15%;" >
       <mat-label>Remarks</mat-label>
-      <input matInput type="text">
+      <input matInput formControlName="Remarks" type="text">
   </mat-form-field>
   </div>
       <div class="button">

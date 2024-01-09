@@ -28,6 +28,7 @@ export class AuthService
      */
     set accessToken(token: string)
     {
+        
         localStorage.setItem('accessToken', token);
     }
 
@@ -77,7 +78,9 @@ export class AuthService
             switchMap((response: any) => {
 
                 // Store the access token in the local storage
-                this.accessToken = response.accessToken;
+                // this.accessToken = response.accessToken;
+                this.accessToken ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjB4MzEzNDM0MzdCMEE2RjcxQS0yRkM0LTRENTYtOTcwOS1EOTlBMjQ1REYyQkIiLCJleHAiOjE3MDQ4Njk4MTksImlzcyI6Iml2aXZhY2FyZS5jb20iLCJhdWQiOiJpdml2YWNhcmUuY29tIn0.r3xP96lZd9HHkJrnuAByjjmY-Ru_njemo54JjctmEAU";
+                
 
                 // Set the authenticated flag to true
                 this._authenticated = true;
@@ -116,7 +119,8 @@ export class AuthService
                 // piece of code can replace the token with the refreshed one.
                 if ( response.accessToken )
                 {
-                    this.accessToken = response.accessToken;
+                    // this.accessToken = response.accessToken;
+                    this.accessToken ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjB4MzEzNDM0MzdCMEE2RjcxQS0yRkM0LTRENTYtOTcwOS1EOTlBMjQ1REYyQkIiLCJleHAiOjE3MDQ4Njk4MTksImlzcyI6Iml2aXZhY2FyZS5jb20iLCJhdWQiOiJpdml2YWNhcmUuY29tIn0.r3xP96lZd9HHkJrnuAByjjmY-Ru_njemo54JjctmEAU";
                 }
 
                 // Set the authenticated flag to true

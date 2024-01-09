@@ -48,31 +48,72 @@ export class ManualRegistrationComponent {
   constructor(private _formBuilder: FormBuilder,private fb: FormBuilder,private patients:PatientsService) {}
   myForm: FormGroup;
   ngOnInit() {
+    this.patients.getPatients().subscribe({
+      next: (data: any) => {
+      // Handle successful response
+        console.log(data);
+       },
+    error: (error: any) => {
+        // Handle error
+        console.error(error);
+      }
+   });
     this.myForm = this.fb.group({
-      icNumber: [''],
-      gender: [''],
-      hrn: [''],
-      nursing: [''],
-      mr: [''],
-      name: [''],
-      sex: [''],
-      dob: [''],
-      age: [''],
-      wardBed: [''],
+      Identifier: [''],
+ _orgcode:[''],
+ Hrn: [''],
+ Idno: [''],
+ Idtype: [''],
+ Name:[''],
+ CreatedBy:[''],
+ CreatedDate: [''],
+ ModifiedBy:[''],
+ ModifiedDate: [''],
+ Merged:[''],
+ Sex: [''],
+ Race:[''],
+ Dob: [''],
+ ResidenceCode:[''],
+ Tel: [''],
+ Tel2: [''],
+ Tel3: [''],
+ Tel4: [''],
+ Address1: [''],
+ Address2: [''],
+ Address3: [''],
+ Address4: [''],
+ PostalCode: [''],
+ Country:[''],
+ Email: [''],
+ AlertEmail:[''],
+ AlertSms: [''],
+ OrganDonor: [''],
+ BloodGroup: [''],
+ Nationality: [''],
+ PlaceOfBirth:[''],
+ VipStatus:[''],
+ LanguageCode: [''],
+ TitleCode: [''],
+ Remarks: [''],
+ Education: [''],
+ Occupation: [''],
+ SpeakEnglish: [''],
+ MaritalStatus: [''],
+ Religion:['']
     });
   }
 
   onSubmit() {
-    this.patients.addPatient(this.myForm.value).subscribe({
-      next: (data: any) => {
-        // Handle successful response
-        console.log(data);
-      },
-      error: (error: any) => {
-        // Handle error
-        console.error(error);
-      }
-    });
+    // // this.patients.addPatient(this.myForm.value).subscribe({
+    // //   next: (data: any) => {
+    // //     // Handle successful response
+    // //     console.log(data);
+    // //   },
+    // //   error: (error: any) => {
+    // //     // Handle error
+    // //     console.error(error);
+    //   }
+    // });
   }
   
 }
