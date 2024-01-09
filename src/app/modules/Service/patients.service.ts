@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PatientsService {
-  private apiUrl = 'http://localhost:3000/patients';
+  private apiUrl = 'http://192.168.0.127/api/visitmgmt/Patient/InitSearch?Codes=SX';
 
   constructor(private http: HttpClient) {}
 

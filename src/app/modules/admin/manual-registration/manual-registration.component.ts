@@ -48,6 +48,16 @@ export class ManualRegistrationComponent {
   constructor(private _formBuilder: FormBuilder,private fb: FormBuilder,private patients:PatientsService) {}
   myForm: FormGroup;
   ngOnInit() {
+    this.patients.getPatients().subscribe({
+      next: (data: any) => {
+      // Handle successful response
+        console.log(data);
+       },
+    error: (error: any) => {
+        // Handle error
+        console.error(error);
+      }
+   });
     this.myForm = this.fb.group({
       icNumber: [''],
       gender: [''],
@@ -63,16 +73,16 @@ export class ManualRegistrationComponent {
   }
 
   onSubmit() {
-    this.patients.addPatient(this.myForm.value).subscribe({
-      next: (data: any) => {
-        // Handle successful response
-        console.log(data);
-      },
-      error: (error: any) => {
-        // Handle error
-        console.error(error);
-      }
-    });
+    // // this.patients.addPatient(this.myForm.value).subscribe({
+    // //   next: (data: any) => {
+    // //     // Handle successful response
+    // //     console.log(data);
+    // //   },
+    // //   error: (error: any) => {
+    // //     // Handle error
+    // //     console.error(error);
+    //   }
+    // });
   }
   
 }
