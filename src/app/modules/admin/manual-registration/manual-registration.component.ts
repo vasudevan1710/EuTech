@@ -16,6 +16,7 @@ import { PatientsService } from 'app/modules/Service/patients.service';
   ],
 })
 export class ManualRegistrationComponent {
+  visitData: any[] = [];
 
   nextTab(tabGroup: MatTabGroup): void {
     const selectedIndex = tabGroup.selectedIndex;
@@ -100,8 +101,19 @@ export class ManualRegistrationComponent {
  SpeakEnglish: [''],
  MaritalStatus: [''],
  Religion:['']
-    });
+    });  this.fetchVisitData(); 
   }
+  fetchVisitData() {
+    var search = 'PT';
+    this.patients.getVisits(search).subscribe(
+      (data: any[]) => {
+        this.visitData = data; // Assign the fetched data to the local variable
+        // Perform any additional processing or operations here
+      },  (error) => {
+        console.error('Error fetching visit data:', error);
+        // Handle error scenarios if needed
+      }
+    );  }
 
   onSubmit() {
     // // this.patients.addPatient(this.myForm.value).subscribe({
