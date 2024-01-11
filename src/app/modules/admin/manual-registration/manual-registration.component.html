@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<form [formGroup]="myForm" (ngSubmit)="onSubmit()" >
-<body>
+<div class="flex-auto p-2 sm:p-2 rounded-t-2x1  bg-card bg-default">
+  <mat-card style="border-radius: 12px;">
     <div
     class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-4 sm:px-10 border-b  dark:bg-transparent">
     <div class="flex-1 min-w-0">
@@ -20,379 +13,103 @@
    
     <!-- Actions -->
     <div class="flex flex-shrink-0 items-center mt-6 sm:mt-0 sm:ml-4">
-        <button mat-stroked-button style="color: #4F46E5;">
+        <button routerLink="add" mat-stroked-button style="color: #4F46E5;">
             <mat-icon class="icon-size-5 mr-2" style="color: #4F46E5;"
-                [svgIcon]="'mat_outline:add_moderator'"></mat-icon>
-            Edit
+                [svgIcon]="'mat_outline:add_moderator'" ></mat-icon>
+            Add
         </button>
-        <button class="ml-3" mat-flat-button style="color: #0D9488;">
+        <!-- <button class="ml-3" mat-flat-button style="color: #0D9488;">
             <mat-icon class="icon-size-5 mr-2" [svgIcon]="'heroicons_solid:link'"></mat-icon>
             Save
-        </button>
+        </button> -->
     </div>
-    
-</div>
-    <div class="flex-auto -mt-8 p-2 sm:p-2 rounded-t-2x1  bg-card bg-default">
-      <mat-card style="border-radius: 12px;"> 
-        <mat-card-content>
-          <div class="card-body">
-          <div class="row">
-    <div class="col-sm-3">
-    <mat-form-field  style="width: 20%;">
-            <mat-label>IC#</mat-label>
-            <input matInput type="text" class="form-control" maxlength="10" autocomplete="off" formControlName="Hrn">
-        </mat-form-field>
-       
-    <mat-form-field style="width: 25%;">
-        <mat-label>Id No</mat-label>
-        <input matInput type="any" maxlength="100" formControlName="Idno">
-    </mat-form-field>
-    <mat-form-field  style="width: 30%;">
-      <mat-label>HRN</mat-label>
-      <input matInput type="text" class="form-control" maxlength="10" autocomplete="off" formControlName="Hrn">
-  </mat-form-field>
-  </div>  
-          </div> 
-       
-  <div class="row">
-        <div class="col-sm-3">
-          <mat-form-field style="width: 20%;">
-            <mat-label>Title</mat-label>
-            <mat-select formControlName="nursing">
-              <mat-option value="one">Mr</mat-option>
-              <mat-option value="two">Mrs</mat-option>
-          </mat-select>
-        </mat-form-field>
-      <mat-form-field style="width: 55%;">
-        <mat-label>Name</mat-label>
-        <input matInput type="any" maxlength="100" formControlName="Name">
-    </mat-form-field>
-   
-        </div>
-      </div>
-    
-  <div class="row">
-        <div class="col-sm-3">
-          <mat-form-field style="width: 20%;">
-            <mat-label>Date Of Birth</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName="Dob">
-            <mat-datepicker-toggle style="translate: 100%;" matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-        <mat-form-field style="width: 20%;" >
-            <mat-label>Age</mat-label>
-            <input matInput type="number" formControlName="age" >
-        </mat-form-field>
-        <mat-form-field style="width: 20%;">
-            <mat-label>Sex</mat-label>
-            <mat-select formControlName="Sex">
-              <mat-option value="male">Male</mat-option>
-              <mat-option value="female">Female</mat-option>
-              <mat-option value="others">Others</mat-option>
-          </mat-select>
-        </mat-form-field>
-   
-        </div>
-      
-    </div>
-  
+
+    <!-- <router-outlet></router-outlet> -->
   </div>
-    </mat-card-content>
-  </mat-card>  
-  </div>    
-      
-
-   
-    &nbsp; 
-
-<!-- <--Tab-->
-<div class="flex-auto -mt-8 p-2 sm:p-2 rounded-t-2x1  bg-card bg-default">
-  <mat-card style="border-radius: 12px;">
-<mat-tab-group #tabGroup mat-stretch-tabs="false" mat-align-tabs="start" >
-  <mat-tab>
-    <ng-template mat-tab-label ><h1>Personal Details</h1></ng-template>
-    <mat-list-item
-    style="font-size:large;font-weight: 600;">Personal Details</mat-list-item>
-    
-    <div class="col-sm-4">
-    <mat-form-field style="width: 25%;" >
-      <mat-label>E-mail</mat-label>
-      <input matInput type="email" required formControlName="Email">
-    </mat-form-field>
-    <mat-form-field style="width: 20%;" >
-      <mat-label>Religion</mat-label>
-      <mat-select formControlName="Religion">
-        <mat-option value="one">Hindu</mat-option>
-        <mat-option value="two">Muslim</mat-option>
-        <mat-option value="three">Christian</mat-option>
-    </mat-select>
-  </mat-form-field>
-<mat-form-field style="width: 20%;" >
-  <mat-label>Country</mat-label>
-  <mat-select formControlName="Country">
-    <mat-option value="one">Indian</mat-option>
-    <mat-option value="two">Thai</mat-option>
-    <mat-option value="three">Chinese</mat-option>
-</mat-select>
-</mat-form-field>
-<mat-form-field style="width: 20%;" >
-  <mat-label>Nationality</mat-label>
-  <mat-select formControlName="Nationality">
-    <mat-option value="one">Indian</mat-option>
-    <mat-option value="two">Thai</mat-option>
-    <mat-option value="three">Chinese</mat-option>
-</mat-select>
-</mat-form-field>
-    </div>
-    <div class="col-sm-4">
-<mat-form-field style="width: 25%;" >
-  <mat-label>Race</mat-label>
-  <mat-select formControlName="Race">
-    <mat-option value="one">Ceylonese</mat-option>
-    <mat-option value="two">Japanese</mat-option>
-    <mat-option value="three">Others</mat-option>
-</mat-select>
-</mat-form-field>
-<mat-form-field style="width: 20%;" >
-  <mat-label>Marital Status</mat-label>
-  <mat-select formControlName="MaritalStatus">
-    <mat-option value="one">Single</mat-option>
-    <mat-option value="two">Married</mat-option>
-</mat-select>
-</mat-form-field>
-<mat-form-field style="width: 20%;" >
-  <mat-label>Blood Group</mat-label>
-  <mat-select formControlName="BloodGroup">
-    <mat-option value="one">O-Positive</mat-option>
-    <mat-option value="two">O-Negative</mat-option>
-    <mat-option value="three">AB-Positive</mat-option>
-    <mat-option value="three">AB-Negative</mat-option>
-</mat-select>
-</mat-form-field>
-<mat-form-field style="width: 20%;">
-  <mat-label>Patient Type</mat-label>
-  <mat-select >
-      <mat-option value="one">VIP</mat-option>
-      <mat-option value="two">General</mat-option>
-  </mat-select>
-</mat-form-field>
-    </div>
-    <div class="col-sm-4">
-      <mat-form-field style="width: 25%;">
-        <mat-label>Residential</mat-label>
-        <input matInput type="text"  required>
-      </mat-form-field>
-      <mat-form-field style="width: 20%;" >
-        <mat-label>Telephone 1</mat-label>
-        <input matInput type="tel"  required formControlName="Tel">
-      </mat-form-field>
-      <mat-form-field style="width: 20%;" >
-        <mat-label>Telephone 2</mat-label>
-        <input matInput type="tel"  required formControlName="Tel2">
-      </mat-form-field>
-      <mat-form-field style="width: 20%;" >
-        <mat-label>Hand Phone</mat-label>
-        <input matInput type="tel"  required formControlName="Tel3">
-      </mat-form-field>
-    
-    </div>
-      <div class="col-sm-4">
-      <mat-form-field style="width: 22%;">
-        <mat-label>Address 1</mat-label>
-        <textarea matInput formControlName="Address1"></textarea>
-      </mat-form-field>
-      <mat-form-field style="width: 22%;">
-        <mat-label>Address 2</mat-label>
-        <textarea matInput formControlName="Address2"></textarea>
-      </mat-form-field>
-      <mat-form-field style="width: 22%;">
-        <mat-label>Address 3</mat-label>
-        <textarea matInput formControlName="Address3"></textarea>
-      </mat-form-field>
-      <mat-form-field style="width: 22%;">
-        <mat-label>Address 4</mat-label>
-        <textarea matInput formControlName="Address4"></textarea>
-      </mat-form-field>
-      <mat-form-field style="width: 20%;" >
-        <mat-label>Place of Birth</mat-label>
-        <mat-select formControlName="PlaceOfBirth">
-          <mat-option value="one">Singapore</mat-option>
-          <mat-option value="two">Malaysia</mat-option>
-          <mat-option value="three">India</mat-option>
-      </mat-select>
-    </mat-form-field>
-     <mat-checkbox style="bottom: 20px; translate: 20px;" class="example-margin">Alpha Numeric</mat-checkbox>
+<div>
+  <div class="row">
+    <div class="row" >
+      <div class="grid-item">
+          <mat-form-field appearance="fill" class="search-field" style="width:500px;">
+              <mat-label>HRN NO</mat-label>
+              <input matInput [(ngModel)] = "objload.HRN"  placeholder="Search...">
+          </mat-form-field>
       </div>
+
+  </div>
+  </div>
+  <div class="row">
+    <mat-table [dataSource]="dataSource" class="mat-elevation">
      
-      <br>
-      <br>
-      <mat-list-item
-      style="font-size:large;font-weight: 600;">Proof of Residential Details</mat-list-item>
-      
-        <mat-divider></mat-divider>
-        <br>
-        <mat-checkbox class="pl-10">Resident</mat-checkbox>
-        <div class="patient-1">
-            
-            <mat-form-field style="width: 22%;">
-                <mat-label>Identity Doc.</mat-label>
-                <mat-select>
-                    <mat-option value="one">Aadhar</mat-option>
-                    <mat-option value="two">Driving Licence</mat-option>
-                </mat-select>
-              </mat-form-field>
-              <mat-form-field style="width: 22%;">
-                <mat-label>Foreign IC #</mat-label>
-                <input matInput type="text">
-            </mat-form-field>
-            <mat-form-field style="width: 22%;">
-                <mat-label>Doc#</mat-label>
-                <input matInput type="text">
-            </mat-form-field>
-            <mat-form-field style="width: 22%;">
-                <mat-label>Recall Date</mat-label>
-                <input matInput [matDatepicker]="picking">
-      <mat-datepicker-toggle style="translate: 100%;" matIconSuffix [for]="picking"></mat-datepicker-toggle>
-      <mat-datepicker #picking></mat-datepicker>
-            </mat-form-field>
-            </div>
-    <div class="button">
-      <button mat-raised-button color="primary" (click)="nextTab(tabGroup)">Next</button>
-    </div>
-  </mat-tab>
-  <mat-tab>
-    <ng-template mat-tab-label ><h1>Additional Details</h1></ng-template>
-      <b>Emergency Contact Details</b>
-      <mat-divider></mat-divider>
-      <div class="patient-1">
-        <mat-form-field style="width: 22%;">
-          <mat-label>Contact Person</mat-label>
-          <input matInput type="tel" required>
-        </mat-form-field>
-        <mat-form-field style="width: 22%;">
-          <mat-label>Fax</mat-label>
-          <input matInput type="fax" required>
-        </mat-form-field>
-        <mat-form-field style="width: 22%;">
-          <mat-label>Residential tel</mat-label>
-          <input matInput type="tel" required>
-        </mat-form-field>
-        <mat-form-field style="width: 22%;">
-          <mat-label>Office tel</mat-label>
-          <input matInput type="tel" required>
-        </mat-form-field>
-        <h2><b>Employment Details</b></h2>
-        <mat-divider></mat-divider>
-        <mat-form-field style="width: 22%;">
-          <mat-label>Previous Total Deposit</mat-label>
-          <input matInput type="number">
-      </mat-form-field>
-      <mat-form-field style="width: 22%;">
-          <mat-label>Subsidy Group</mat-label>
-          <input matInput type="number">
-      </mat-form-field>
-      <mat-form-field style="width: 22%;">
-          <mat-label>Billing Account</mat-label>
-          <input matInput type="text">
-      </mat-form-field>
-      <mat-form-field style="width: 22%;">
-          <mat-label>Previous Total Dues</mat-label>
-          <input matInput type="number">
-      </mat-form-field>
+      <ng-container matColumnDef="Sno">
+        <mat-header-cell *matHeaderCellDef> S.No. </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+      </ng-container>
+    
 
-      <h2><b>Medical Details</b></h2>
-      <mat-divider></mat-divider>
-      <mat-form-field style="width: 22%;">
-        <mat-label>Medical Record</mat-label>
-        <input matInput type="text">
-    </mat-form-field>
-    <mat-form-field style="width: 22%;">
-      <mat-label>Recall Date</mat-label>
-      <input matInput [matDatepicker]="picked">
-<mat-datepicker-toggle style="translate: 100%;" matIconSuffix [for]="picked"></mat-datepicker-toggle>
-<mat-datepicker #picked></mat-datepicker>
-  </mat-form-field>
-    <mat-form-field style="width: 22%;">
-      <mat-label>Recall Date</mat-label>
-      <input matInput [matDatepicker]="pickdate">
-<mat-datepicker-toggle style="translate: 100%;" matIconSuffix [for]="pickdate"></mat-datepicker-toggle>
-<mat-datepicker #pickdate></mat-datepicker>
-  </mat-form-field>
-    <mat-form-field style="width: 22%;">
-        <mat-label>Patient Status</mat-label>
-        <input matInput type="text">
-    </mat-form-field>
-    <mat-form-field style="width: 22%;">
-      <mat-label>Wavier reference</mat-label>
-      <input matInput type="text">
-  </mat-form-field>
+  
+      <ng-container matColumnDef="HRN_No">
+        <mat-header-cell *matHeaderCellDef> HRN No </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      </ng-container>
+    
+
+     
+      <ng-container matColumnDef="Name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+      </ng-container>
+    
+    
+      <ng-container matColumnDef="DBO">
+        <mat-header-cell *matHeaderCellDef> DBO </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+      </ng-container>
+      
+        <ng-container matColumnDef="Sex">
+          <mat-header-cell *matHeaderCellDef> Sex </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+        </ng-container>
+        
+      <ng-container matColumnDef="Speaking_English">
+        <mat-header-cell *matHeaderCellDef> Speak Eng </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+      </ng-container>
+ 
+  <ng-container matColumnDef="Action" >
+    <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+        <button mat-icon-button color="primary" matTooltip="View this row"
+            
+            id="iconTableButton" [matTooltipClass]="' custom-tip '">
+            <mat-icon aria-label="View this row" class="f-14">
+                remove_red_eye
+            </mat-icon>
+        </button>
+        <button mat-icon-button color="accent" matTooltip="Edit this row"
+         
+            id="iconTableButton" [matTooltipClass]="'custom-tip'">
+            <mat-icon aria-label="Edit this row" class="f-14">
+                edit
+            </mat-icon>
+        </button>
+        <button mat-icon-button color="warn" matTooltip="Delete this row"
+            id="iconTableButton"
+            [matTooltipClass]="'custom-tip'">
+            <mat-icon aria-label="Delete this row" class="f-14">
+                delete
+            </mat-icon>
+        </button>
+    </mat-cell>
+</ng-container>
+
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
   </div>
-  <div class="patient-1">
-    <mat-form-field style="width: 22%;">
-      <mat-label>Recall Period</mat-label>
-      <input matInput type="text">
-  </mat-form-field>
-  <mat-form-field style="width: 22%;">
-      <mat-label>Wavier Group</mat-label>
-      <mat-select>
-          <mat-option value="one">Known</mat-option>
-          <mat-option value="two">Not-Known</mat-option>
-      </mat-select>
-  </mat-form-field>
-  <mat-form-field style="width: 15%;" >
-      <mat-label>Remarks</mat-label>
-      <input matInput formControlName="Remarks" type="text">
-  </mat-form-field>
-  </div>
-      <div class="button">
-        <button mat-raised-button color="primary" (click)="backTab(tabGroup)">Back</button>
-        <button mat-raised-button color="primary" (click)="nextTab(tabGroup)">Next</button>
-      </div>
-    </mat-tab>
-  <mat-tab>
-    <ng-template mat-tab-label ><h1>Name of the Kin</h1></ng-template>
-    <mat-divider></mat-divider>
-        <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-          <!-- Position Column -->
-          <ng-container matColumnDef="name">
-            <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
-          </ng-container>
-        
-          <!-- Name Column -->
-          <ng-container matColumnDef="position">
-            <mat-header-cell *matHeaderCellDef> Alert Name </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-          </ng-container>
-        
-          <!-- Weight Column -->
-          <ng-container matColumnDef="weight">
-            <mat-header-cell *matHeaderCellDef> Start Date </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
-          </ng-container>
-        
-          <!-- Symbol Column -->
-          <ng-container matColumnDef="symbol">
-            <mat-header-cell *matHeaderCellDef> End Date </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
-          </ng-container>
-        
-          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-        </mat-table>
-        <mat-form-field appearance="outline">
-          <mat-label>Address</mat-label>
-          <input matInput  placeholder="Ex. 1 Main St, New York, NY"
-                 required>
-        </mat-form-field>
-      <div class="button">
-        <button mat-raised-button color="primary" (click)="backTab(tabGroup)">Back</button>
-        <button mat-raised-button color="primary">Submit</button>
-      </div>
-  </mat-tab>
-  </mat-tab-group>
+</div>
+  
   </mat-card>
   </div>
-  </body>
-</form>
-  </html>

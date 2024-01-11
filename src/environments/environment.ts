@@ -4,7 +4,9 @@
 
 export const environment = {
     production: false,
-    apiUrl:  'api/visitmgmt/Patient/InitSearch?Codes=PT'
+
+    apiurl :"http://192.168.0.127/api/visitmgmt/",
+
 };
 
 /*

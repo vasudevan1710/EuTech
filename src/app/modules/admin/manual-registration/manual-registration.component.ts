@@ -1,8 +1,11 @@
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { DatePipe, DecimalPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatTabGroup } from '@angular/material/tabs';
+import { Route } from '@angular/router';
 import { PatientsService } from 'app/modules/Service/patients.service';
+import { result } from 'lodash';
 
 @Component({
   selector: 'manual-registration',
@@ -12,44 +15,31 @@ import { PatientsService } from 'app/modules/Service/patients.service';
     {
       provide: STEPPER_GLOBAL_OPTIONS,
       useValue: {showError: true},
-    },
+    },DatePipe,DecimalPipe
   ],
 })
 export class ManualRegistrationComponent {
-  visitData: any[] = [];
-
-  nextTab(tabGroup: MatTabGroup): void {
-    const selectedIndex = tabGroup.selectedIndex;
-    const tabCount = tabGroup._tabs.length;
-
-    // Check if there's a next tab
-    if (selectedIndex < tabCount - 1) {
-      // Increment the selected index to move to the next tab
-      tabGroup.selectedIndex = selectedIndex + 1;
-    }
-  }
-
-  backTab(tabGroup: MatTabGroup): void {
-    const selectedIndex = tabGroup.selectedIndex;
-
-    // Check if there's a previous tab
-    if (selectedIndex > 0) {
-      // Decrement the selected index to move to the previous tab
-      tabGroup.selectedIndex = selectedIndex - 1;
-    }
-  }
-
-
-
-
 
   isLinear = false;
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['Sno', 'HRN_No', 'Name', 'DBO','Sex','Speaking_English','Action'];
+patientlist : any =[];
+
+ objload : any ={
+  HRN:'',
+ }
+
+
   dataSource = ELEMENT_DATA;
-  constructor(private _formBuilder: FormBuilder,private fb: FormBuilder,private patients:PatientsService) {}
+  constructor(
+    private fb: FormBuilder,
+    private patientservice:PatientsService,
+    // public _router : Route,
+    public _datepipe : DatePipe) {
+
+    }
   myForm: FormGroup;
   ngOnInit() {
-    this.patients.getPatients().subscribe({
+    this.patientservice.getPatients().subscribe({
       next: (data: any) => {
       // Handle successful response
         console.log(data);
@@ -60,48 +50,23 @@ export class ManualRegistrationComponent {
       }
    });
     this.myForm = this.fb.group({
-      Identifier: [''],
- _orgcode:[''],
- Hrn: [''],
- Idno: [''],
- Idtype: [''],
- Name:[''],
- CreatedBy:[''],
- CreatedDate: [''],
- ModifiedBy:[''],
- ModifiedDate: [''],
- Merged:[''],
- Sex: [''],
- Race:[''],
- Dob: [''],
- ResidenceCode:[''],
- Tel: [''],
- Tel2: [''],
- Tel3: [''],
- Tel4: [''],
- Address1: [''],
- Address2: [''],
- Address3: [''],
- Address4: [''],
- PostalCode: [''],
- Country:[''],
- Email: [''],
- AlertEmail:[''],
- AlertSms: [''],
- OrganDonor: [''],
- BloodGroup: [''],
- Nationality: [''],
- PlaceOfBirth:[''],
- VipStatus:[''],
- LanguageCode: [''],
- TitleCode: [''],
- Remarks: [''],
- Education: [''],
- Occupation: [''],
- SpeakEnglish: [''],
- MaritalStatus: [''],
- Religion:['']
-    });  this.fetchVisitData(); 
+
+      icNumber: [''],
+      gender: [''],
+      hrn: [''],
+      nursing: [''],
+      mr: [''],
+      name: [''],
+      sex: [''],
+      dob: [''],
+      age: [''],
+      wardBed: [''],
+    });
+
+    this.searchfild();
+    console.log(this.searchfild(),'efef');
+(); 
+
   }
   fetchVisitData() {
     var search = 'PT';
@@ -115,18 +80,22 @@ export class ManualRegistrationComponent {
       }
     );  }
 
-  onSubmit() {
-    // // this.patients.addPatient(this.myForm.value).subscribe({
-    // //   next: (data: any) => {
-    // //     // Handle successful response
-    // //     console.log(data);
-    // //   },
-    // //   error: (error: any) => {
-    // //     // Handle error
-    // //     console.error(error);
-    //   }
-    // });
+
+  public searchfild() :void{
+    debugger
+    this.patientlist = [];
+    let obj ={
+      HRN : 'SA   8766787',
+    };
+    this.patientservice.getsearchpatient(obj).subscribe((result) => {
+      debugger
+      if(result){
+        this.patientlist = result;
+        console.log(this.patientlist,'checktext');
+      }
+    })
   }
+ 
   
 }
 export interface PeriodicElement {
