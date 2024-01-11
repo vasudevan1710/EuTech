@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Patient } from '../Types/data';
-import { Observable } from 'rxjs';
+import { Observable, catchError, throwError } from 'rxjs';
+import { environment } from 'environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,12 @@ export class PatientsService {
   private apiUrl = 'http://192.168.0.127/api/visitmgmt/Patient/InitSearch?Codes=SX';
 
   constructor(private http: HttpClient) {}
+baseurl = environment.apiurl;
+
+public getsearchpatient(obj : any) {
+  debugger
+  return this.http.post(this.baseurl + "Patient/SearchIndividual",obj).pipe(catchError(this.handleError));
+}
 
   // Create
   addPatient(data: Patient): Observable<Patient> {
@@ -33,6 +40,10 @@ export class PatientsService {
   // Delete
   deletePatient(patientId: number): Observable<Patient> {
     return this.http.delete<Patient>(`${this.apiUrl}/${patientId}`);
+  }
+
+  public handleError(error: Response) {
+    return throwError(error);
   }
 }
 

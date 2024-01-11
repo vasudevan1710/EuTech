@@ -6,13 +6,15 @@ import { MaterialModule } from '../material/material.module';
 import { SharedModule } from 'app/shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { patientdetailsModule } from './patientdetails/patientdetails.module';
+import { PatientdetailsComponent } from './patientdetails/patientdetails.component';
 
 
 const routes: Route[] = [
-  {
-      path     : '',
-      component: ManualRegistrationComponent
-  }
+  
+      {path     : '',component: ManualRegistrationComponent},
+      { path: 'add', component: PatientdetailsComponent },
+      { path: '', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -21,7 +23,7 @@ const routes: Route[] = [
   ],
   imports     : [
       RouterModule.forChild(routes),
-      CommonModule,SharedModule,MaterialModule,NgxMaterialTimepickerModule
+      CommonModule,SharedModule,MaterialModule,NgxMaterialTimepickerModule, 
   ]
  
 })
