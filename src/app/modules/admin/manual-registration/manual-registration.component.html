@@ -34,8 +34,9 @@
               <mat-label>HRN NO</mat-label>
               <input matInput [(ngModel)] = "objload.HRN"  placeholder="Search...">
           </mat-form-field>
-
+>>>>>>>>> Temporary merge branch 2
       </div>
+
   </div>
   </div>
   <div class="row">
@@ -46,12 +47,14 @@
         <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
       </ng-container>
     
+
   
       <ng-container matColumnDef="HRN_No">
         <mat-header-cell *matHeaderCellDef> HRN No </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
       </ng-container>
     
+
      
       <ng-container matColumnDef="Name">
         <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
@@ -101,13 +104,79 @@
     </mat-cell>
 </ng-container>
 
+
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
   </div>
-
+<<<<<<<<< Temporary merge branch 1
+  <div class="patient-1">
+    <mat-form-field style="width: 22%;">
+      <mat-label>Recall Period</mat-label>
+      <input matInput type="text">
+  </mat-form-field>
+  <mat-form-field style="width: 22%;">
+      <mat-label>Wavier Group</mat-label>
+      <mat-select>
+          <mat-option value="one">Known</mat-option>
+          <mat-option value="two">Not-Known</mat-option>
+      </mat-select>
+  </mat-form-field>
+  <mat-form-field style="width: 15%;" >
+      <mat-label>Remarks</mat-label>
+      <input matInput formControlName="Remarks" type="text">
+  </mat-form-field>
+  </div>
+      <div class="button">
+        <button mat-raised-button color="primary" (click)="backTab(tabGroup)">Back</button>
+        <button mat-raised-button color="primary" (click)="nextTab(tabGroup)">Next</button>
+      </div>
+    </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label ><h1>Name of the Kin</h1></ng-template>
+    <mat-divider></mat-divider>
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <!-- Position Column -->
+          <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+          </ng-container>
+        
+          <!-- Name Column -->
+          <ng-container matColumnDef="position">
+            <mat-header-cell *matHeaderCellDef> Alert Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+          </ng-container>
+        
+          <!-- Weight Column -->
+          <ng-container matColumnDef="weight">
+            <mat-header-cell *matHeaderCellDef> Start Date </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+          </ng-container>
+        
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="symbol">
+            <mat-header-cell *matHeaderCellDef> End Date </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+          </ng-container>
+        
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+        <mat-form-field appearance="outline">
+          <mat-label>Address</mat-label>
+          <input matInput  placeholder="Ex. 1 Main St, New York, NY"
+                 required>
+        </mat-form-field>
+      <div class="button">
+        <button mat-raised-button color="primary" (click)="backTab(tabGroup)">Back</button>
+        <button mat-raised-button color="primary">Submit</button>
+      </div>
+  </mat-tab>
+  </mat-tab-group>
+=========
 </div>
   
-
+>>>>>>>>> Temporary merge branch 2
   </mat-card>
   </div>

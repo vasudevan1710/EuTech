@@ -5,7 +5,8 @@
 export const environment = {
     production: false,
 
-    apiurl :"http://192.168.0.127/api/visitmgmt/"
+    apiurl :"http://192.168.0.127/api/visitmgmt/",
+
 
 };
 

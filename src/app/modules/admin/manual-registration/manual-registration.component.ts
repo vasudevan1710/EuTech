@@ -19,7 +19,6 @@ import { result } from 'lodash';
   ],
 })
 export class ManualRegistrationComponent {
-  visitData: any[] = [];
   isLinear = false;
   displayedColumns: string[] = ['Sno', 'HRN_No', 'Name', 'DBO','Sex','Speaking_English','Action'];
 patientlist : any =[];
@@ -61,6 +60,7 @@ patientlist : any =[];
       age: [''],
       wardBed: [''],
     });
+
   }
 
   public ContractManPowerList(): void {
