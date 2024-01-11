@@ -19,6 +19,7 @@ import { result } from 'lodash';
   ],
 })
 export class ManualRegistrationComponent {
+  visitData: any[] = [];
   isLinear = false;
   displayedColumns: string[] = ['Sno', 'HRN_No', 'Name', 'DBO','Sex','Speaking_English','Action'];
 patientlist : any =[];
@@ -60,27 +61,33 @@ patientlist : any =[];
       age: [''],
       wardBed: [''],
     });
-
-    this.searchfild();
-    console.log(this.searchfild(),'efef');
   }
 
-
-  public searchfild() :void{
-    debugger
+  public ContractManPowerList(): void {
     this.patientlist = [];
-    let obj ={
-      HRN : 'SA   8766787',
+    let obj = {
+      HRN: +this.objload.HRN,
     };
     this.patientservice.getsearchpatient(obj).subscribe((result) => {
-      debugger
-      if(result){
+      if (result) {
         this.patientlist = result;
-        console.log(this.patientlist,'checktext');
+        console.log(this.patientlist, 'ContractServiceList')
       }
     })
   }
- 
+
+  onSubmit() {
+    // // this.patients.addPatient(this.myForm.value).subscribe({
+    // //   next: (data: any) => {
+    // //     // Handle successful response
+    // //     console.log(data);
+    // //   },
+    // //   error: (error: any) => {
+    // //     // Handle error
+    // //     console.error(error);
+    //   }
+    // });
+  }
   
 }
 export interface PeriodicElement {

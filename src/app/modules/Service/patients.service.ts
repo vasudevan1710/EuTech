@@ -1,14 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Patient } from '../Types/data';
+
 import { Observable, catchError, throwError } from 'rxjs';
+
 import { environment } from 'environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PatientsService {
-  private apiUrl = 'http://192.168.0.127/api/visitmgmt/Patient/InitSearch?Codes=SX';
+  private apiUrl = environment.apiurl;
 
   constructor(private http: HttpClient) {}
 baseurl = environment.apiurl;
@@ -18,14 +20,17 @@ public getsearchpatient(obj : any) {
   return this.http.post(this.baseurl + "Patient/SearchIndividual",obj).pipe(catchError(this.handleError));
 }
 
+  getVisits(search:string) {
+    return this.http.get('api/visitmgmt/Patient/InitSearch?Codes='+search);
+  }
   // Create
   addPatient(data: Patient): Observable<Patient> {
     return this.http.post<Patient>(this.apiUrl, data);
   }
 
   // Read
-  getPatients(): Observable<Patient[]> {
-    return this.http.get<Patient[]>(this.apiUrl);
+  getPatients(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
   }
 
   getPatientById(patientId: number): Observable<Patient> {
