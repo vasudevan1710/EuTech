@@ -19,6 +19,7 @@ import { result } from 'lodash';
   ],
 })
 export class ManualRegistrationComponent {
+
   isLinear = false;
   displayedColumns: string[] = ['Sno', 'HRN_No', 'Name', 'DBO','Sex','Speaking_English','Action'];
 patientlist : any =[];
@@ -49,6 +50,7 @@ patientlist : any =[];
       }
    });
     this.myForm = this.fb.group({
+
       icNumber: [''],
       gender: [''],
       hrn: [''],
@@ -63,7 +65,20 @@ patientlist : any =[];
 
     this.searchfild();
     console.log(this.searchfild(),'efef');
+(); 
+
   }
+  fetchVisitData() {
+    var search = 'PT';
+    this.patients.getVisits(search).subscribe(
+      (data: any[]) => {
+        this.visitData = data; // Assign the fetched data to the local variable
+        // Perform any additional processing or operations here
+      },  (error) => {
+        console.error('Error fetching visit data:', error);
+        // Handle error scenarios if needed
+      }
+    );  }
 
 
   public searchfild() :void{

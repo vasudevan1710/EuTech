@@ -23,6 +23,7 @@
             Save
         </button> -->
     </div>
+
     <!-- <router-outlet></router-outlet> -->
   </div>
 <div>
@@ -34,6 +35,7 @@
               <input matInput [(ngModel)] = "objload.HRN"  placeholder="Search...">
           </mat-form-field>
       </div>
+
   </div>
   </div>
   <div class="row">
@@ -44,12 +46,14 @@
         <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
       </ng-container>
     
+
   
       <ng-container matColumnDef="HRN_No">
         <mat-header-cell *matHeaderCellDef> HRN No </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
       </ng-container>
     
+
      
       <ng-container matColumnDef="Name">
         <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
@@ -99,9 +103,11 @@
     </mat-cell>
 </ng-container>
 
+
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
+
   </div>
 </div>
   
